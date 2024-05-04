@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <h1>Faça seu cadastro empresarial</h1>
+    <form method="POST" action="teste.jsp">
+        <fieldset name="personal_data">
+            <label>Nome:</label>
+            <br>
+            <input type="text" name="name"/>
+            <br>
+            <label>Data de Nascimento:</label>
+            <br>
+            <input type="date" name="birthday">
+            <br>
+            <label>Sexo:</label>
+            <br>
+            <input type="radio" name="sexo" value="f"> Femino
+            <input type="radio" name="sexo" value="m"> Masculino
+            <input type="radio" name="sexo" value="n"> Não Binário
+            <br>
+        </fieldset>
+        <fieldset name=" contact_data">
+            <label>Telefone:</label>
+            <input type="tel" name="phone">
+            <label>E-Mail:</label>
+            <input type="email" name="email">
+        </fieldset>
+        <h2>Configurações do vestuário:</h2>
+        <fieldset>
+            <label>Tamanho da camiseta:</label>
+            <br>
+            <select name="clothes">
+                <option>P</option>
+                <option>M</option>
+                <option>G</option>
+                <option>GG</option>
+                <option>XGG</option>
+            </select>
+            <br>
+            <label>Tamanho da calça</label>
+            <br>
+            <select name="pants">
+                <option>P</option>
+                <option>M</option>
+                <option>G</option>
+                <option>GG</option>
+                <option>XGG</option>
+            </select>
+            <br>
+            <label>Tamanho dos Sapatos:</label>
+            <br>
+            <input type="checkbox" name="shoes"> 34
+            <input type="checkbox" name="shoes"> 35
+            <input type="checkbox" name="shoes"> 36
+            <input type="checkbox" name="shoes"> 37
+            <input type="checkbox" name="shoes"> 38
+            <input type="checkbox" name="shoes"> 39
+            <input type="checkbox" name="shoes"> 40
+            <input type="checkbox" name="shoes"> 41
+            <input type="checkbox" name="shoes"> 42
+            <input type="checkbox" name="shoes"> 43
+            <input type="checkbox" name="shoes"> 44
+            <input type="checkbox" name="shoes"> 45
+            <br>
+            <label>Informações adicionais digite abaixo:</label>
+            <br>
+            <textarea name="additional" rows="10" cols="40"></textarea>
+        </fieldset>
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
