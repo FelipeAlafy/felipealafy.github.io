@@ -1,0 +1,10 @@
+.image {
+    background: url("https://tm.ibxk.com.br/2017/07/13/13160112901226.jpg") no-repeat;
+    min-height: 200px;
+    border: 2px solid;
+    display: block;
+    background-size: contain;
+}
+.image:hover {
+    border-radius: 50px;
+}

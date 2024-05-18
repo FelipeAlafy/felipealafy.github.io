@@ -1,0 +1,23 @@
+.alternada {
+    list-style: upper-latin;
+    font-size: 30px;
+    width: fit-content;
+}
+
+.alternada li {
+    margin-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.alternada li:hover {
+    font-weight: bold;
+}
+
+.alternada li:nth-child(odd) {
+    background-color: rgba(0, 255, 255, 0.781);
+}
+
+.alternada li:nth-child(even) {
+    background-color: rgba(220, 20, 60, 0.76);
+}

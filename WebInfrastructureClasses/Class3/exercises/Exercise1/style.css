@@ -1,0 +1,47 @@
+#frame1 {
+    background-color: red;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 2px black solid;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#frame2 {
+    background-color: green;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 2px black solid;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#frame3 {
+    background-color: yellow;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 2px black solid;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#frame4 {
+    background-color: lightblue;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 2px black solid;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
