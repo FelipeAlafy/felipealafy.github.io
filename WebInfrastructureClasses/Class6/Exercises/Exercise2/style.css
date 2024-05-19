@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: relative;
+    left: 40%;
+}
+
+
+.border {
+    border: 2px black solid;
+    border-radius: 50px;
+}
+
+button {
+    color: white;
+    background-color: gray;
+    padding: 30px;
+    margin: 5px;
+}
+
+.operationButtons {
+    background-color: orange;
+    border: 2px black solid;
+    border-radius: 50px;
+}
+
+#btn0 {
+    width: 160px;
+}
+
+#btnClear, #btnAns {
+    width: 115px;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+main {
+    background-color: black;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+p {
+    font-size: 30pt;
+    text-align: right;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+}
