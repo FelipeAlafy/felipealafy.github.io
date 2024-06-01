@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     draw(76, 127, 99.5, 99.5, 25, context)
     quoteLeft(68, 74, 99.5, 99.5, 7.5, context, "7,5")
     quoteLeft(68, 74, 117, 117, 7.5, context, "7,5")
-    quoteBottom(76, 127, 126.5, 132.5, 51, context, "51")
+    quoteTop(76, 91, 90.5, 96.5, 0, context, "15")
     draw(76, 91, 107, 107, 10, context)
     draw(76, 76, 99.5, 107, 17.5, context)
     draw(91, 91, 107, 117, 0, context)
@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
     context.beginPath()
     context.arc((111 * 4), (112 * 4), (7 * 4), 0, 2 * Math.PI, false)
     context.stroke()
+    quoteBottom(105, 117.25, 126.5, 132.5, 14, context, "14")
 
     //Segundo desenho
     draw(147.25, 156.25, 99.5, 99.5, 25, context)
-    quoteBottom(147.25, 156.25, 127.5, 133.5, 0, context, "9")
     draw(147.5, 147.5, 99.5, 124.5, 0, context)
     draw(156, 156, 99.5, 124.5, 0, context)
     quoteRight(158, 164, 99.5, 99.5, 25, context, "25")
@@ -87,18 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
     drawSegmentedLineHorizontal(147.25, 156.25, 105, context)
     drawSegmentedLineHorizontal(147.25, 156.25, 119, context)
     
-    
     //Terceiro desenho
     draw(76, 127, 144.5, 144.5, 9, context)
+    quoteBottom(76, 127, 156.5, 162.5, 51, context, "51")
     draw(76, 76, 144.5, 153.5, 0, context)
     draw(127, 127, 144.5, 153.5, 0, context)
+    quoteRight(129.5, 136.5, 144.5, 144.5, 9, context, "9")
     drawSegmentedLineVertical(91, 144.5, 153.5, context)
-    quoteTop(76, 91, 138.5, 142.5, 0, context, "15")
-    drawSegmentedLineVertical(102, 144.5, 153.5, context)
-    quoteBottom(91, 102, 155.5, 161.5, 0, context, "11")
-    drawSegmentedLineVertical(116, 144.5, 153.5, context)
-    quoteTop(102, 116, 138.5, 142.5, 0, context, "14")
-});
+    drawSegmentedLineVertical(105, 144.5, 153.5, context)
+    drawSegmentedLineVertical(117.25, 144.5, 153.5, context)
+    //105, 117.25, 126.5, 132.5
+})
 
 //Paramenters are required in mm
 function draw(lineXStart, lineXEnd, lineYStart, lineYEnd, spaccing, context) {
@@ -283,10 +282,10 @@ function quoteTop (lineXStart, lineXEnd, lineYStart, lineYEnd, spaccing, context
     context.closePath()
     context.beginPath()
     context.moveTo(lineXEnd, lineYStart)
+    context.moveTo(lineXEnd, lineYStart)
     context.lineTo((lineXEnd - (3 * MM_TO_PX)), (lineYStart - (1 * MM_TO_PX)))
-    context.lineTo((lineXEnd - (3 * MM_TO_PX)), (lineYEnd - (3 * MM_TO_PX)))
-    context.moveTo((lineXEnd - (3 * MM_TO_PX)), (lineYStart - (1.01 * MM_TO_PX)))
-    context.lineTo((lineXEnd - (3 * MM_TO_PX)), (lineYEnd - (3.1 * MM_TO_PX)))
+    context.lineTo((lineXEnd - (3 * MM_TO_PX)), (lineYStart + (1 * MM_TO_PX)))
+    context.lineTo(lineXEnd, lineYStart)
     context.fill()
 
     //Arrow Left
@@ -295,9 +294,8 @@ function quoteTop (lineXStart, lineXEnd, lineYStart, lineYEnd, spaccing, context
     context.beginPath()
     context.moveTo(lineXStart, lineYStart)
     context.lineTo((lineXStart + (3 * MM_TO_PX)), (lineYStart - (1 * MM_TO_PX)))
-    context.lineTo((lineXStart + (3 * MM_TO_PX)), (lineYEnd - (3 * MM_TO_PX)))
-    context.moveTo((lineXStart + (3 * MM_TO_PX)), (lineYStart - (1.01 * MM_TO_PX)))
-    context.lineTo((lineXStart + (3 * MM_TO_PX)), (lineYEnd - (3.1 * MM_TO_PX)))
+    context.lineTo((lineXStart + (3 * MM_TO_PX)), (lineYStart + (1 * MM_TO_PX)))
+    context.lineTo(lineXStart, lineYStart)
     context.fill()
 
     context.stroke()
