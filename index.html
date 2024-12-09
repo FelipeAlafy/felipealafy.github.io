@@ -5,16 +5,99 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Felipe Alafy</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+
+    <!--Fonts From google fonts-->
+    <!--Hrvatska Lijeva-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>EU TE AMO DENIS ALEXANDRE!</h1>
+    <header class="cover">
+        <img src="./images/background.jpg" alt="An image of a beatiful mountain." class="wallpaper">
+        <!--<a href="https://www.pond5.com/pt/stock-footage/item/138419916-financial-chart-graph-motion-modern-panel-screen-analysis-cu">Footage stock</a> como oferecimento de SquareMotion, do <a href="https://www.pond5.com/">Pond5</a>.-->
+        <img src="./images/profile.jpg" alt="A photo of Felipe Alafy" class="profile">
+        <button type="button" onclick="dosomething()"> Pressione</button>
+    </header>
+    <section class="main">
+        <h1 class="welcome" id="welcome">Curriculo</h1>
+        <div class="about-container">
+            <div class="about-subcontainers" id="presentation">
+                <h2>&#128075; Apresentação</h2>
+                <p>Sou o Felipe, sempre engajado em aprender novas coisas, amo fazer parte de um time que está sempre a se desenvolver produtivamente,  estou sempre empenhado para compartilhar aquilo que aprendo com a equipe. Aprendo muito rápido observando ao redor, e amo ser proativo com o meu trabalho.</p>
+            </div>
+            <div class="about-subcontainers" id="whoami">
+                <h2>&#128102;Quem sou eu?</h2>
+                <p>Me chamo Felipe Alafy Rodrigues Silva.<br>
+                Nasci em 18 de novembro de 2005, xx anos de idade.<br>
+                Moro em Pouso Alegre, MG.</p>
+            </div>
+        </div>
 
-    <img src="./images/world.png" alt="An image of all continents in a way that pacific ocean is in the center" class="world-img">
-    <button class="map-icon" onclick="home">
-        <img src="./images/home.png" alt="A home icon" height="100px">
-    </button>
-    <hr>
-    <img src="./images/pa-map.png" alt="An map of Pouso Alegre, Minas Gerais, Brazil." class="pa-map"> 
+        <div class="container" id="skills">
+            <h2>&#9997;Habilidades</h2>
+            <div class="skill-group">
+                <h3>&#127758;Línguas</h3>
+                <div class="group">
+                    <img src="./images/brazilFlag.png" alt="Bandeira do Brasil." class="flags" id="hoverAnimation">
+                    <p class="description">Nativo</p>
+                </div>
+                <div class="group">
+                    <img src="./images/canadaFlag.png" alt="Bandeira do Canada." class="flags" id="hoverAnimation">
+                    <p class="description">Proficiente</p>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>&#128206;Office</h3>
+                <div class="group">
+                    <img src="./images/Icon-Word.svg" alt="Microsoft Word icon" class="flags" id="hoverAnimation">
+                    <p class="description">Word</p>
+                </div>
+                <div class="group">
+                    <img src="./images/Excel-icon.png" alt="Microsoft Excel icon" class="flags" id="hoverAnimation">
+                    <p class="description">Excel</p>
+                </div>
+                <div class="group">
+                    <img src="./images/powerpoint-icon.png" alt="Microsoft PowerPoint icon" class="flags" id="hoverAnimation">
+                    <p class="description">PowerPoint</p>    
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>&#128187;Sistemas Operacionais</h3>
+                <div class="group">
+                    <img src="./images/windows.webp" alt="Windows icon" class="flags" id="hoverAnimation">
+                    <p class="description">Windows</p>
+                </div>
+                <div class="group">
+                    <img src="./images/tux.webp" alt="Linux Tux icon" class="flags" id="hoverAnimation">
+                    <p class="description">Linux</p>    
+                </div>
+                <div class="group">
+                    <img src="./images/AndroidIcon.svg" alt="Android icon" class="flags" id="hoverAnimation">
+                    <p class="description">Android</p>    
+                </div>
+                <div class="group">
+                    <img src="./images/apple.png" alt="Linux Tux icon" class="flags" id="hoverAnimation">
+                    <p class="description">iOS</p>    
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>&#128196;Linguagens de Programação</h3>
+                <div class="group">
+                    <img src="./images/kotlinIcon.png" alt="Windows icon" class="flags" id="hoverAnimation">
+                    <p class="description">Kotlin</p>
+                </div>
+                <div class="group">
+                    <img src="./images/Javaicon.png" alt="Linux Tux icon" class="flags" id="hoverAnimation">
+                    <p class="description">Java</p>
+                </div>
+                <div class="group">
+                    <img src="./images/JSIcon.png" alt="Android icon" class="flags" id="hoverAnimation">
+                    <p class="description">JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
