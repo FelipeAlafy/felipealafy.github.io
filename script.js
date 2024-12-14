@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function variousTitles() {
     let  welcome_title = document.getElementById('welcome');
     welcome_title.innerHTML = "";
-    let texts = ["Bem\tVindo(a)!", "Ao\tCurriculum\tVitae", "Do Carrasco", "Do\tFelipe\tAlafy."]
+    let texts = ["Bem\tVindo(a)!", "Ao\tCurriculum\tVitae", "Do Carrasco!", "Do\tFelipe\tAlafy."]
     const cursor= "|";
 
     for (let i = 0; i < texts.length; i++) {
