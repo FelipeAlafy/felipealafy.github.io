@@ -134,3 +134,18 @@ p {
 .group {
     display: inline-block;
 }
+
+#startButton {
+
+    transition: 1s;
+    padding: 20px;
+    position: absolute;
+    margin-left: 45%;
+    border-radius: 40px;
+    background: transparent;
+    font-size: 15pt;
+}
+
+#startButton:hover, :focus {
+    transform: scale(1.2) rotate(-270deg);
+}

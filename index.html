@@ -16,9 +16,8 @@
 <body>
     <header class="cover">
         <img src="./images/background.jpg" alt="An image of a beatiful mountain." class="wallpaper">
-        <!--<a href="https://www.pond5.com/pt/stock-footage/item/138419916-financial-chart-graph-motion-modern-panel-screen-analysis-cu">Footage stock</a> como oferecimento de SquareMotion, do <a href="https://www.pond5.com/">Pond5</a>.-->
         <img src="./images/profile.jpg" alt="A photo of Felipe Alafy" class="profile">
-        <button type="button" onclick="dosomething()"> Pressione</button>
+        <button type="button" onclick="ScrollOnPress()" id="startButton"> → </button>
     </header>
     <section class="main">
         <h1 class="welcome" id="welcome">Curriculo</h1>
@@ -30,7 +29,7 @@
             <div class="about-subcontainers" id="whoami">
                 <h2>&#128102;Quem sou eu?</h2>
                 <p>Me chamo Felipe Alafy Rodrigues Silva.<br>
-                Nasci em 18 de novembro de 2005, xx anos de idade.<br>
+                Nasci em 18 de novembro de 2005, <span id="age">XX</span> anos de idade.<br>
                 Moro em Pouso Alegre, MG.</p>
             </div>
         </div>
@@ -41,11 +40,11 @@
                 <h3>&#127758;Línguas</h3>
                 <div class="group">
                     <img src="./images/brazilFlag.png" alt="Bandeira do Brasil." class="flags" id="hoverAnimation">
-                    <p class="description">Nativo</p>
+                    <p class="description">Português</p>
                 </div>
                 <div class="group">
                     <img src="./images/canadaFlag.png" alt="Bandeira do Canada." class="flags" id="hoverAnimation">
-                    <p class="description">Proficiente</p>
+                    <p class="description">Inglês</p>
                 </div>
             </div>
             <div class="skill-group">
