@@ -1,102 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Felipe Alafy</title>
-    <link rel="stylesheet" href="darkmode-style.css">
-    <script src="script_old.js"></script>
-
-    <!--Fonts From google fonts-->
-    <!--Hrvatska Lijeva-->
+    <title>Curriculum vitae</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="base-style.css">
+    <link rel="stylesheet" href="modes-style.css">
 </head>
 <body>
-    <header class="cover">
-        <img src="./images/background.jpg" alt="An image of a beatiful mountain." class="wallpaper">
-        <img src="./images/profile.jpg" alt="A photo of Felipe Alafy" class="profile">
-        <button type="button" onclick="ScrollOnPress()" id="startButton"> → </button>
-    </header>
-    <section class="main">
-        <h1 class="welcome" id="welcome">Curriculo</h1>
-        <div class="about-container">
-            <div class="about-subcontainers" id="presentation">
-                <h2>&#128075; Apresentação</h2>
-                <p>Sou o Felipe, sempre engajado em aprender novas coisas, amo fazer parte de um time que está sempre a se desenvolver produtivamente,  estou sempre empenhado para compartilhar aquilo que aprendo com a equipe. Aprendo muito rápido observando ao redor, e amo ser proativo com o meu trabalho.</p>
-            </div>
-            <div class="about-subcontainers" id="whoami">
-                <h2>&#128102;Quem sou eu?</h2>
-                <p>Me chamo Felipe Alafy Rodrigues Silva.<br>
-                Nasci em 18 de novembro de 2005, <span id="age">XX</span> anos de idade.<br>
-                Moro em Pouso Alegre, MG.</p>
-            </div>
-        </div>
+    <header id="header">
+        <h1>Felipe Alafy Rodrigues Silva</h1>
+        <p id="frase-de-impacto">Tecnologia para mudar o mundo.</p>
+        <p id="paragrafo-descritivo">
+            Estou constantemente trabalhando para construir soluções de informação, que mudem positivamente as condições
+            de trabalho e tomada de decisão da sua empresa.
+        </p>
+        <label class="switch-darkmode">
+            <input type="checkbox" onclick="changeMode()" id="mode">
+            <span class="slider round"></span>
+        </label>
 
-        <div class="container" id="skills">
-            <h2>&#9997;Habilidades</h2>
-            <div class="skill-group">
-                <h3>&#127758;Línguas</h3>
-                <div class="group">
-                    <img src="./images/brazilFlag.png" alt="Bandeira do Brasil." class="flags" id="hoverAnimation">
-                    <p class="description">Português</p>
-                </div>
-                <div class="group">
-                    <img src="./images/canadaFlag.png" alt="Bandeira do Canada." class="flags" id="hoverAnimation">
-                    <p class="description">Inglês</p>
-                </div>
+    </header>
+    <section class="info-card" style="margin-left: 3%;">
+        <article>
+            <h2>Sobre Felipe Alafy?</h2>
+            <p>Chamo-me Felipe Alafy Rodrigues Silva, tenho <span id="idade">XX</span> anos.
+                <br>Nascido em 18/11/2005.<br>
+                Resido em <a href="https://maps.app.goo.gl/yuLqT1s1dD7J9PLh8" rel="external" target="_blank">Pouso Alegre, MG.</a>
+            </p>
+        </article>
+        <article>
+            <h2>Contato</h2>
+            <p>
+                E-mail: <a href="mailto:profissional@felipealafy.net">profissional@felipealafy.net</a>.<br>
+                WhatsApp: <a href="https://wa.me/5535984641899" rel="external" target="_blank">aqui para acessar o WhatsApp.</a><br>
+                Telefone: +55 (35) 98464-1899<br>
+                Linkedin: <a href="https://www.linkedin.com/in/felipe-alafy-rodrigues-silva-b11673234/" target="_blank" rel="external">
+                Felipe Alafy Rodrigues Silva</a>
+            </p>
+        </article>
+        <article>
+            <h2>Formações</h2>
+            <p>
+                Graduando em Ciência da Computação na Uninter.<br>
+                Atualmente no período: <span id="periodo">XX</span>.
+            </p>
+        </article>
+    </section>
+    <aside>
+        <img id="full-body" src="images/full-body.png" alt="A picture of Felipe Alafy Rodrigues Silva, full body image.">
+    </aside>
+    <section>
+        <article>
+            <h2>Habilidades e Ferramentas:</h2>
+            <div>
+                <h3>Línguas</h3>
+                <attr title="Português nativo."><img src="images/brazilFlag.png" alt="Brazil Flag"></attr>
+                <attr title="Inglês fluente."><img src="images/canadaFlag.png" alt="Canada Flag"></attr>
             </div>
-            <div class="skill-group">
-                <h3>&#128206;Office</h3>
-                <div class="group">
-                    <img src="./images/Icon-Word.svg" alt="Microsoft Word icon" class="flags" id="hoverAnimation">
-                    <p class="description">Word</p>
-                </div>
-                <div class="group">
-                    <img src="./images/Excel-icon.png" alt="Microsoft Excel icon" class="flags" id="hoverAnimation">
-                    <p class="description">Excel</p>
-                </div>
-                <div class="group">
-                    <img src="./images/powerpoint-icon.png" alt="Microsoft PowerPoint icon" class="flags" id="hoverAnimation">
-                    <p class="description">PowerPoint</p>    
-                </div>
+            <div>
+                <h3>Sistemas Operacionais</h3>
+                <attr title="Windows."><img src="images/windows.webp" alt="Logotipo do windows 11."></attr>
+                <attr title="Linux."><img src="images/tux.webp" alt="Linux Flag"></attr>
             </div>
-            <div class="skill-group">
-                <h3>&#128187;Sistemas Operacionais</h3>
-                <div class="group">
-                    <img src="./images/windows.webp" alt="Windows icon" class="flags" id="hoverAnimation">
-                    <p class="description">Windows</p>
-                </div>
-                <div class="group">
-                    <img src="./images/tux.webp" alt="Linux Tux icon" class="flags" id="hoverAnimation">
-                    <p class="description">Linux</p>    
-                </div>
-                <div class="group">
-                    <img src="./images/AndroidIcon.svg" alt="Android icon" class="flags" id="hoverAnimation">
-                    <p class="description">Android</p>    
-                </div>
-                <div class="group">
-                    <img src="./images/apple.png" alt="Linux Tux icon" class="flags" id="hoverAnimation">
-                    <p class="description">iOS</p>    
-                </div>
+            <div>
+                <h3>Desenvolvimento</h3>
+                <attr title="Desenvolvimento para android."><img src="images/AndroidIcon.png" alt="Android icon."></attr>
+                <attr title="Desenvolvimento em Kotlin para JVM e Android."><img src="images/kotlinIcon.png" alt="Kotlin icon."></attr>
+                <attr title="Desenvolvimento em Java."><img src="images/java.png" alt="Java icon."></attr>
+                <attr title="Git e GitHub."><img src="images/git.png"></attr>
+                <attr title="Conteurização em HTML5."><img src="images/html5.png" alt="HTML5 Icon."></attr>
+                <attr title="Estilização com CSS3."><img src="images/css3.png" alt="CSS3 Icon."> </attr>
             </div>
-            <div class="skill-group">
-                <h3>&#128196;Linguagens de Programação</h3>
-                <div class="group">
-                    <img src="./images/kotlinIcon.png" alt="Windows icon" class="flags" id="hoverAnimation">
-                    <p class="description">Kotlin</p>
-                </div>
-                <div class="group">
-                    <img src="./images/Javaicon.png" alt="Linux Tux icon" class="flags" id="hoverAnimation">
-                    <p class="description">Java</p>
-                </div>
-                <div class="group">
-                    <img src="./images/JSIcon.png" alt="Android icon" class="flags" id="hoverAnimation">
-                    <p class="description">JavaScript</p>
-                </div>
+            <div>
+                <h3>Pacote Office</h3>
+                <attr title="Microsoft Word."><img src="images/Icon-Word.png" alt="Word Icon."></attr>
+                <attr title="Microsoft Excel."><img src="images/Excel-icon.png" alt="Excel Icon."></attr>
+                <attr title="Microsoft Powerpoint."><img src="images/powerpoint-icon.png" alt="Powerpoint Icon."></attr>
             </div>
-        </div>
+            <div>
+                <h3>ERPs:</h3>
+                <attr title="TOTVs Protheus"><img src="images/TOTVS_pos.png" alt="TOTVS logo." style="margin-bottom: 10px"></attr>
+                <attr title="SAP PP"><img src="images/sap.png" alt="SAP logo."></attr>
+            </div>
+        </article>
+    </section>
+    <article style="width: 90%; text-align: center;"><h2>Experiências profissionais</h2></article>
+    <section class="experiencias">
+        <article>
+            <h3>XCMG Brasil Industria</h3>
+            <p>Tempo de empresa, 2024 - presente</p>
+            <h4>Auxiliar Administrativo</h4>
+            <ul>
+                <li>Gestão de Funcionários;</li>
+                <li>Responsável por relátorios de produtividade;</li>
+                <li>Responsável por monitoramento de defeitos em produtos,<br> DPU (defeitos por unidade Produzida);</li>
+                <li>Controle de Estoque;</li>
+                <li>Utilização do sistema ERP TOTVs.</li>
+            </ul>
+            <h4>Jovem Aprendiz</h4>
+            <ul>
+                <li>Curso incompleto em Eletromecânica.</li>
+                <li>Responsável pelo monitoramento de máquinas durante o processo produtivo.</li>
+                <li>Responsável pelo calculo de DPU (Defeitos Por Unidade).</li>
+            </ul>
+        </article>
+        <aside>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7856026346212!2d-45.89658138255615!3d-22.286109900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cbb94b248502cf%3A0x8190f079aa558d95!2sXCMG%20Brasil%20Ind%C3%BAstria%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1735989684396!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </aside>
     </section>
 </body>
 </html>
