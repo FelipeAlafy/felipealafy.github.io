@@ -145,6 +145,38 @@
             }
         }
     }
+
+    iframe {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .certifications {
+        font-family: "Ubuntu Mono", serif;
+        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        min-width: 97%;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 50px;
+        article:hover {
+            transform: none;
+        }
+    }
+
+    footer {
+        font-family: "Ubuntu Mono", serif;
+        margin-top: 20px;
+        padding: 20px;
+        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        border-radius: 50px;
+        width: 97%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article.licensas:hover {
+        transform: none;
+    }
 }
 
 
@@ -302,6 +334,18 @@
             }
             aside {
                 box-shadow:  20px 20px 60px #363636, -20px -20px 60px #4a4a4a;
+            }
+        }
+
+        .certifications {
+            font-family: "Ubuntu Mono", serif;
+            box-shadow:  20px 20px 60px #363636, -20px -20px 60px #4a4a4a;
+            min-width: 97%;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 50px;
+            article:hover {
+                transform: none;
             }
         }
     }
