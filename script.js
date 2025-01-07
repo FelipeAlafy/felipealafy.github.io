@@ -31,7 +31,7 @@ function changeMode() {
 
         for (let i = 0; i < document.body.children.length; i++) {
             console.log(document.body.children[i].tagName === "ASIDE");
-            if (document.body.children[i].tagName === "ASIDE" || document.body.children[i].tagName === "ARTICLE" || document.body.children[i].tagName === "SECTION" || document.body.children[i].tagName === "FOOTER") {
+            if (document.body.children[i].tagName === "ASIDE" || document.body.children[i].tagName === "ARTICLE" || document.body.children[i].className === "certifications" || document.body.children[i].tagName === "FOOTER") {
                 document.body.children[i].style.boxShadow = "20px 20px 60px #363636, -20px -20px 60px #4a4a4a";
             }
             for (let j = 0; j < document.body.children[i].children.length; j++) {
@@ -52,7 +52,7 @@ function changeMode() {
         document.body.classList.add("lightmode-style")
         for (let i = 0; i < document.body.children.length; i++) {
             console.log(document.body.children[i].tagName === "ASIDE");
-            if (document.body.children[i].tagName === "ASIDE" || document.body.children[i].tagName === "ARTICLE" || document.body.children[i].tagName === "SECTION") {
+            if (document.body.children[i].tagName === "ASIDE" || document.body.children[i].tagName === "ARTICLE" || document.body.children[i].className === "certifications" || document.body.children[i].tagName === "FOOTER") {
                 document.body.children[i].style.boxShadow = "20px 20px 60px #bebebe, -20px -20px 60px #ffffff";
             }
             for (let j = 0; j < document.body.children[i].children.length; j++) {
