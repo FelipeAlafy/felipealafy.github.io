@@ -97,6 +97,7 @@
         position: relative;
         margin: 20px;
         display: inline-block;
+        background: none;
     }
 
     article {
@@ -288,8 +289,6 @@
             position: absolute;
             margin-top: 700px;
             display: inline-block;
-            box-shadow:  20px 20px 60px #363636, -20px -20px 60px #4a4a4a;
-
         }
 
         article {
@@ -329,6 +328,7 @@
         }
 
         .experiencias {
+            background: none;
             article {
                 box-shadow:  20px 20px 60px #363636, -20px -20px 60px #4a4a4a;
             }
