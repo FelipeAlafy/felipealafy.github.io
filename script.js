@@ -28,7 +28,13 @@ function changeMode() {
     if (check.checked) {
         document.body.classList.remove("lightmode-style")
         document.body.classList.add("darkmode-style");
-
+        
+        let articles = document.getElementsByClassName("info");
+        console.log(articles);
+        for (let i = 0; i < articles.length; i++) {
+            articles[i].style.boxShadow = "20px 20px 60px #363636, -20px -20px 60px #4a4a4a";
+        }
+        
         for (let i = 0; i < document.body.children.length; i++) {
             console.log(document.body.children[i].tagName === "ASIDE");
             if (document.body.children[i].tagName === "ASIDE" || document.body.children[i].tagName === "ARTICLE" || document.body.children[i].className === "certifications" || document.body.children[i].tagName === "FOOTER") {
@@ -38,7 +44,7 @@ function changeMode() {
                 if (document.body.children[i].children[j].tagName === "ARTICLE" || document.body.children[i].children[j].tagName === "ASIDE") {
                     document.body.children[i].children[j].style.boxShadow = "20px 20px 60px #363636, -20px -20px 60px #4a4a4a";
                 }
-                if (document.body.children[i].children[j].tagName === "SECTION") {
+                if (document.body.children[i].children[j].className === "certifications") {
                     document.body.children[i].children[j].style.boxShadow = "20px 20px 60px #363636, -20px -20px 60px #4a4a4a";
                 }
             }
@@ -62,7 +68,7 @@ function changeMode() {
                 if (document.body.children[i].children[j].tagName === "ASIDE") {
                     document.body.children[i].children[j].style.boxShadow = "20px 20px 60px #bebebe, -20px -20px 60px #ffffff";
                 }
-                if (document.body.children[i].children[j].tagName === "SECTION") {
+                if (document.body.children[i].children[j].className === "certifications") {
                     document.body.children[i].children[j].style.boxShadow = "20px 20px 60px #bebebe, -20px -20px 60px #ffffff";
                 }
             }

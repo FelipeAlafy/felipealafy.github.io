@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+body {
+    margin: auto;
+}
 
+main#aboutme {
+    text-align: center;
+}
+
+#experiencesTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button#back {
+        justify-content: left;
+        align-items: start;
+    }
+}
 
 .lightmode-style, body {
     #totvs {
@@ -38,10 +54,10 @@
             display: inline-block;
             width: 60px;
             height: 34px;
-            box-shadow: -8px -4px 8px 0px #ffffff,
-            8px 4px 12px 0px #d1d9e6,
-            4px 4px 4px 0px #d1d9e6 inset,
-            -4px -4px 4px 0px #ffffff inset;
+            box-shadow: -8px -4px 8px 0 #ffffff,
+            8px 4px 12px 0 #d1d9e6,
+            4px 4px 4px 0 #d1d9e6 inset,
+            -4px -4px 4px 0 #ffffff inset;
             border-radius: 30px;
         }
         .switch-darkmode input {
@@ -95,7 +111,7 @@
 
     section {
         position: relative;
-        margin: 20px;
+        margin: auto;
         display: inline-block;
         background: none;
     }
@@ -107,6 +123,7 @@
         margin: 50px auto;
         border-radius: 50px;
         transition: .4s;
+        text-align: left;
     }
 
     article:hover {
@@ -180,7 +197,26 @@
     }
 }
 
+h2#professionalExperiences {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
 
+button {
+    display: inline-flex;
+    padding: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
 
 /*Darkmode*/
 .darkmode-style {
@@ -189,6 +225,13 @@
     }
     a:visited {
         color: rgba(220, 167, 3, 0.66);
+    }
+
+
+
+    button {
+        display: flex;
+        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     }
 
     section {
@@ -238,62 +281,16 @@
             -4px -4px 4px 0px #222222 inset;
             border-radius: 30px;
         }
-        .switch-darkmode input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
 
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-            border-radius: 30px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-image: url("./images/icons/moon.png");
-            background-size: cover;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        input:checked + .slider {
-            background-color: rgba(220, 167, 3, 0.66);
-        }
-
-        input:checked + .slider:before {
-            transform: translate3d(100%, 0, 0);
-            transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-        };
-
-        .slider.round {
-            border-radius: 34px;
-        }
-        .slider.round:before {
-            border-radius: 50%;
-        }
         section {
             position: absolute;
             margin-top: 700px;
             display: inline-block;
+            background: none;
         }
 
         article {
             font-family: "Ubuntu Mono", serif;
-
             box-shadow:  20px 20px 60px #363636, -20px -20px 60px #4a4a4a;
             padding: 20px;
             margin: 50px auto;
