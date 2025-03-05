@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
-
 .lightmode-style, body {
     #totvs {
         font-family: 'Ubuntu', sans-serif;
@@ -177,6 +175,10 @@
 
     article.licensas:hover {
         transform: none;
+    }
+
+    img#full-body {
+        padding: 10px;
     }
 }
 
