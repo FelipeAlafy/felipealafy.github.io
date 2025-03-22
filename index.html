@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="modes-style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./images/icons/clipboard_emoji.ico">
 </head>
-<body>
+<body class="dark-theming">
     <header id="header">
         <h1>Felipe Alafy Rodrigues Silva</h1>
         <p id="frase-de-impacto">Tecnologia para mudar o mundo.</p>
@@ -20,11 +20,12 @@
         </p>
         <label class="switch-darkmode">
             <input type="checkbox" onclick="changeMode()" id="mode">
-            <span class="slider round"></span>
+            <span id="sun" class="slider round"></span>
+            <span id="moon" class="slider round"></span>
         </label>
 
     </header>
-
+    <main>
         <section class="info-card" style="margin-left: 3%;">
             <article>
                 <h2>Sobre Felipe Alafy?</h2>
@@ -54,7 +55,7 @@
         <aside>
             <img id="full-body" src="images/full-body.png" alt="A picture of Felipe Alafy Rodrigues Silva, full body image.">
         </aside>
-        <section>
+        <section id="habilidades-principais">
             <article>
                 <h2>Habilidades e Ferramentas:</h2>
                 <div>
@@ -89,31 +90,41 @@
                 </div>
             </article>
         </section>
-
-    <article style="width: 90%; text-align: center;"><h2>Experiências profissionais</h2></article>
-    <section class="experiencias">
-        <article>
-            <h3>XCMG Brasil Industria</h3>
-            <p>Tempo de empresa, 2024 - presente</p>
-            <h4>Auxiliar Administrativo</h4>
-            <ul>
-                <li>Gestão de Funcionários;</li>
-                <li>Responsável por relátorios de produtividade;</li>
-                <li>Responsável por monitoramento de defeitos em produtos,<br> DPU (defeitos por unidade Produzida);</li>
-                <li>Controle de Estoque;</li>
-                <li>Utilização do sistema ERP TOTVs.</li>
-            </ul>
-            <h4>Jovem Aprendiz</h4>
-            <ul>
-                <li>Curso incompleto em Eletromecânica.</li>
-                <li>Responsável pelo monitoramento de máquinas durante o processo produtivo.</li>
-                <li>Responsável pelo calculo de DPU (Defeitos Por Unidade).</li>
-            </ul>
-        </article>
-        <aside>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7856026346212!2d-45.89658138255615!3d-22.286109900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cbb94b248502cf%3A0x8190f079aa558d95!2sXCMG%20Brasil%20Ind%C3%BAstria%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1735989684396!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </aside>
-    </section>
+    </main>
+    <article id="experiencias-profissionais-title">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+        </button>
+        <h2>Experiências profissionais</h2>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+        </button>
+    </article>
+    <main id="experiencias">
+        <section class="XCMG">
+            <article>
+                <h3>XCMG Brasil Industria</h3>
+                <p>Tempo de empresa, 2024 - presente</p>
+                <h4>Auxiliar Administrativo</h4>
+                <ul>
+                    <li>Gestão de Funcionários;</li>
+                    <li>Responsável por relátorios de produtividade;</li>
+                    <li>Responsável por monitoramento de defeitos em produtos,<br> DPU (defeitos por unidade Produzida);</li>
+                    <li>Controle de Estoque;</li>
+                    <li>Utilização do sistema ERP TOTVs.</li>
+                </ul>
+                <h4>Jovem Aprendiz</h4>
+                <ul>
+                    <li>Curso incompleto em Eletromecânica.</li>
+                    <li>Responsável pelo monitoramento de máquinas durante o processo produtivo.</li>
+                    <li>Responsável pelo calculo de DPU (Defeitos Por Unidade).</li>
+                </ul>
+            </article>
+            <aside id="XCMG-Map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7856026346212!2d-45.89658138255615!3d-22.286109900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cbb94b248502cf%3A0x8190f079aa558d95!2sXCMG%20Brasil%20Ind%C3%BAstria%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1735989684396!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </aside>
+        </section>
+    </main>
     <section class="certifications">
         <h2>Formações e certificados:</h2>
         <article>
@@ -141,15 +152,31 @@
         </article>
         <article>
             <h3>Cursos Livres:</h3>
-            <h4>Línguas:</h4>
-            <ul>
-                <li>
+            <h4>Línguas</h4>
+            <div id="linguas">
+                <img src="images/icons/WhiteLondonClock.png" alt="Uma imagem do Big Bang relógio de londres misturado com outros elementos da cultura inglesa.">
+
+
+                <div class="blocking">
+                    <h3>Módulos Concluídos</h3>
+                    <br>
+                    <br>
+                    <div id="linguas-blocking-1"></div>
+                    <div id="linguas-blocking-2"></div>
+                    <div id="linguas-blocking-3"></div>
+                    <div id="linguas-blocking-4"></div>
+                    <div id="linguas-blocking-5"></div>
+                    <h4>6 de 6 módulos</h4>
+                    <br>
+                    <br>
                     <p>Curso de Inglês, avançado - Alura Língua, acesse o  aqui
                         <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EevrMfZ0DLVIsqFWohYYQPwBLOLOa-aKRWXRB_Y3uQF4nA?e=R0sMNz"
                            rel="external" target="_blank">certificado</a>.
                     </p>
-                </li>
-            </ul>
+                </div>
+
+            </div>
+
             <h4>HTML 5 & CSS3:</h4>
             <ul>
                 <li>
