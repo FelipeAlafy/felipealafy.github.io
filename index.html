@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>Curriculum vitae</title>
+    <script src="./script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./images/icons/clipboard_emoji.ico">
 </head>
-<body class="dark-theming">
+<body>
     <header id="header">
+
         <h1>Felipe Alafy Rodrigues Silva</h1>
         <p id="frase-de-impacto">Tecnologia para mudar o mundo.</p>
         <p id="paragrafo-descritivo">
@@ -23,7 +24,6 @@
             <span id="sun" class="slider round"></span>
             <span id="moon" class="slider round"></span>
         </label>
-
     </header>
     <main>
         <section class="info-card" style="margin-left: 3%;">
@@ -73,7 +73,7 @@
                     <attr title="Desenvolvimento para android."><img src="images/AndroidIcon.png" alt="Android icon."></attr>
                     <attr title="Desenvolvimento em Kotlin para JVM e Android."><img src="images/kotlinIcon.png" alt="Kotlin icon."></attr>
                     <attr title="Desenvolvimento em Java."><img src="images/java.png" alt="Java icon."></attr>
-                    <attr title="Git e GitHub."><img src="images/git.png"></attr>
+                    <attr title="Git e GitHub."><img src="images/git.png" alt="Git Icon."></attr>
                     <attr title="Conteurização em HTML5."><img src="images/html5.png" alt="HTML5 Icon."></attr>
                     <attr title="Estilização com CSS3."><img src="images/css3.png" alt="CSS3 Icon."> </attr>
                 </div>
@@ -93,11 +93,11 @@
     </main>
     <article id="experiencias-profissionais-title">
         <button>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
         </button>
         <h2>Experiências profissionais</h2>
         <button>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
         </button>
     </article>
     <main id="experiencias">
@@ -148,27 +148,23 @@
                         </p>
                     </li>
                 </ul>
-            </p>
         </article>
         <article>
-            <h3>Cursos Livres:</h3>
-            <h4>Línguas</h4>
+            <h1>Cursos Livres:</h1>
             <div id="linguas">
+                <h2>Línguas</h2>
                 <img src="images/icons/WhiteLondonClock.png" alt="Uma imagem do Big Bang relógio de londres misturado com outros elementos da cultura inglesa.">
-
-
                 <div class="blocking">
                     <h3>Módulos Concluídos</h3>
                     <br>
-                    <br>
-                    <div id="linguas-blocking-1"></div>
-                    <div id="linguas-blocking-2"></div>
-                    <div id="linguas-blocking-3"></div>
-                    <div id="linguas-blocking-4"></div>
-                    <div id="linguas-blocking-5"></div>
-                    <h4>6 de 6 módulos</h4>
-                    <br>
-                    <br>
+                    <h4>Curso de Inglês - Alura Lingua</h4>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <h4>6 de 6 módulos concluídos</h4>
                     <p>Curso de Inglês, avançado - Alura Língua, acesse o  aqui
                         <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EevrMfZ0DLVIsqFWohYYQPwBLOLOa-aKRWXRB_Y3uQF4nA?e=R0sMNz"
                            rel="external" target="_blank">certificado</a>.
@@ -176,99 +172,271 @@
                 </div>
 
             </div>
+            <div id="html-css">
+                <h2>Desenvolvimento de Softwares</h2>
+                <img src="images/html-css.png" alt="Uma imagem do HTML5 e CSS3">
+                <div class="blocking">
+                    <h4>Módulos Concluídos</h4>
+                    <h3>Curso de HTML5 e CSS3 - Estudonauta:</h3>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <button id="AboutHTMLandCSSCertifications" class="ShowCertifications">
+                        <span>Ver Certificados</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
+                    <h4>2 de 5 módulos concluídos</h4>
+                </div>
+                <div class="AboutCertifications AboutHTMLandCSSCertifications">
+                    <ul>
+                        <li>
+                            <p>
+                                Módulo 1 do Curso de HTML5 & CSS3 - Estudonauta, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EcrWO3ydRD5Jqi7bfSIg_mYBWwYkAmEDD3RvazYdwPL4KA?e=g7IxhT"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-B467-9.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Módulo 2 do Curso de HTML5 & CSS3 - Estudonauta, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/Ef4u6cOy9udGnFAxeN3VGloBS7JPdQ8Y9TpKQBrG11dVMw?e=5QR3l8"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-E979-3.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="java">
+                <img src="images/java_200px.png" alt="Uma imagem do Java.">
+                <div class="blocking">
+                    <h4>Módulos Concluídos</h4>
+                    <h3>Curso de Java e POO - Estudonauta:</h3>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <button id="AboutJavaCertifications" class="ShowCertifications">
+                        <span>Ver Certificados</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
+                    <h4>2 de 2 módulos concluídos</h4>
+                </div>
+                <div class="AboutCertifications AboutJavaCertifications">
+                    <ul>
+                        <li>
+                            <p>
+                                Curso introdutório de Java - Estudonauta, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EayWaHOegmxPmiip_OPqPTUBG4o7XSMgIiYdVyTHrFSfoQ?e=crn7SL"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-EA19-3.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                POO - Java Orientado a Objetos - Estudonauta, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EferUy2QlYVHm2L4GhM2hywBUL0sVmVmadHnmrHcal1Lug?e=1b90qE"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-EA69-4.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <h4>HTML 5 & CSS3:</h4>
-            <ul>
-                <li>
-                    <p>
-                        Módulo Curso de HTML5 & CSS3 - Estudonauta, acesse aqui o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EcrWO3ydRD5Jqi7bfSIg_mYBWwYkAmEDD3RvazYdwPL4KA?e=g7IxhT"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-B467-9.
-                    </p>
-                </li>
-            </ul>
-            <h4>Java:</h4>
-            <ul>
-                <li>
-                    <p>
-                        Curso introdutório de Java - Estudonauta, acesse aqui o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EayWaHOegmxPmiip_OPqPTUBG4o7XSMgIiYdVyTHrFSfoQ?e=crn7SL"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-EA19-3.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        POO - Java Orientado a Objetos - Estudonauta, acesse aqui o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EferUy2QlYVHm2L4GhM2hywBUL0sVmVmadHnmrHcal1Lug?e=1b90qE"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-EA69-4.
-                    </p>
-                </li>
-            </ul>
-            <h4>Linux:</h4>
-            <ul>
-                <li>
-                    <p>
-                        Linux básico UNHATCHED - CISCO, acesse aqui o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EaaWVEQnLEdNptECayRHGbwBu3Xr_XBzx7pUp4gYDXTtFw?e=4nUqiR"
-                        rel="external" target="_blank">certificado</a>.
-                    </p>
-                </li>
-            </ul>
-            <h4>Programação Básica:</h4>
-            <ul>
-                <li>
-                    <p>
-                        Curso de Programação Básica com Portugol Studio - Lógica de Programação e Algoritmos Modulo 00 - Estudonauta, acesse o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EWRnUhEO-k9AoVj21D4ff_UBqP3at7XZLGljccRjN9uqMg?e=qGUt7V"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-AD83-7.
-                    </p>
-                </li>
-            </ul>
-            <h4>Arquitetura de Computadores:</h4>
-            <ul>
-                <li>
-                    <p>
-                        Curso de Arquitetura de Computadores Modulo 00 - Estudonauta, acesse o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/Ec71pyL0rXxBrtinxY5C_z0Bm_LTNS1ylzECHW2JuSxZaA?e=nVCsjA"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-133EB-7.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Curso de Arquitetura de Computadores Modulo 01 - Estudonauta, acesse o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EUwVBSfEpJdKiNt-zVD7FxQBEBOD_X3KDJOCkn5i48onRQ?e=Xba6Ve"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-15143-2.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Curso de Arquitetura de Computadores Modulo 02 - Estudonauta, acesse o
-                        <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EbFoztaSqntPi1ojGLgFLp8BfXaK5QhKp4Gz73DMmyH2Bg?e=yd5mo4"
-                           rel="external" target="_blank">certificado</a>.<br>
-                        Para validar o certificado clique
-                        <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.<br>
-                        Código de validação de certificado: 2C01-1B695-9.
-                    </p>
-                </li>
-            </ul>
+            <div id="linux">
+                <img src="images/Linux_256px.webp" alt="Uma imagem do TUX mascote do Linux.">
+                <div class="blocking">
+                    <h4>Módulos Concluídos</h4>
+                    <h3>Cursos de Linux - Estudonauta:</h3>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <div class="dark-blocking"></div>
+                    <button id="AboutLinuxCertifications" class="ShowCertifications">
+                        <span>Ver Certificados</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
+                    <h4>3 de 7 módulos concluídos</h4>
+                </div>
+                <div class="AboutCertifications AboutLinuxCertifications">
+                    <ul>
+                        <li>
+                            <p>
+                                Linux básico UNHATCHED - CISCO, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EaaWVEQnLEdNptECayRHGbwBu3Xr_XBzx7pUp4gYDXTtFw?e=4nUqiR"
+                                   rel="external" target="_blank">certificado</a>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Linux Módulo 00 - Primeiros Passos - Estudonauta, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EX9Nn_j1UudFja0ahUSddG0BC-OE7Ub0sEgi8TZaiys65g?e=JtWp3Z"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-B79C-A.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Linux Módulo 01 - Interface e Terminal - Estudonauta, acesse aqui o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EciB1e24hFhPvA5R-_dggj4BvBvhddf4k5dNHBj4k-LbHg?e=dlTnS1"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-B80F-1.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="portugol">
+                <img src="images/portugol-studio.png" alt="Uma imagem da logo do Portugol Studio.">
+                <div class="blocking">
+                    <h4>Módulos Concluídos</h4>
+                    <h3>Curso de Lógica de Programação com Portugol Studio - Estudonauta:</h3>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <button id="AboutPortugolCertifications" class="ShowCertifications">
+                        <span>Ver Certificados</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
+                    <h4>6 de 6 módulos concluídos</h4>
+                </div>
+                <div class="AboutCertifications AboutPortugolCertifications">
+                    <ul>
+                        <li>
+                            <p>
+                                Lógica de Programação e Algoritmos Modulo 00 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EWRnUhEO-k9AoVj21D4ff_UBqP3at7XZLGljccRjN9uqMg?e=Ngay1H"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-AD83-7.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lógica de Programação e Algoritmos Modulo 01 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/ERJstxK1wVFJui6wvfE307sBnxg_hnugT0s1o3y0rz6fzw?e=dU5bwW"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-AD9C-3.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lógica de Programação e Algoritmos Modulo 02 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/Ef4wj03icMRPr7fZMZmxMsUBhjC1C9F5LivRnybHeN79Dw?e=pIKiL0"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-ADEB-9.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lógica de Programação e Algoritmos Modulo 03 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EbPGSxMievRFovpTccdQx4kBZFJzmxHEUt7cNbWukQ5cdA?e=gnbNyjs"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-AE3B-4.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lógica de Programação e Algoritmos Modulo 04 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EeeFUi-1ILdPjfVp-Y1yR6kBg5LZ7VjbmGFqOANX_9zJMg?e=NXZeJ9"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-AEC3-8.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lógica de Programação e Algoritmos Modulo 05 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/ETHukJgdcAVCnUWGWb8tdEsBZC16cU4P5s8cgDspP0ii2g?e=3gbOdo"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-AF37-5.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="hardwareArchitecture">
+                <img src="images/PC.png" alt="Uma de um Desktop com um monitor.">
+                <div class="blocking">
+                    <h4>Módulos Concluídos</h4>
+                    <h3>Cursos de Arquitetura de hardware - Estudonauta:</h3>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <div class="light-blocking"></div>
+                    <button id="HardwareAchitectureCertifications" class="ShowCertifications">
+                        <span>Ver Certificados</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
+                    <h4>3 de 3 módulos concluídos</h4>
+                </div>
+                <div class="AboutCertifications AboutHardwareArchitectureCertifications">
+                    <ul>
+                        <li>
+                            <p>
+                                Curso de Arquitetura de Computadores Modulo 00 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/Ec71pyL0rXxBrtinxY5C_z0Bm_LTNS1ylzECHW2JuSxZaA?e=nVCsjA"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-133EB-7.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Curso de Arquitetura de Computadores Modulo 01 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EUwVBSfEpJdKiNt-zVD7FxQBEBOD_X3KDJOCkn5i48onRQ?e=Xba6Ve"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-15143-2.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Curso de Arquitetura de Computadores Modulo 02 - Estudonauta, acesse o
+                                <a href="https://1drv.ms/b/c/c1675f64fbc1b3e4/EbFoztaSqntPi1ojGLgFLp8BfXaK5QhKp4Gz73DMmyH2Bg?e=yd5mo4"
+                                   rel="external" target="_blank">certificado</a>.
+                                Para validar o certificado clique
+                                <a href="https://www.estudonauta.com/validacao-de-certificado/" rel="external" target="_blank">aqui</a>.
+                                Código de validação de certificado: 2C01-1B695-9.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <h4>Outras ferramentas e eventos:</h4>
             <ul>
                 <li>

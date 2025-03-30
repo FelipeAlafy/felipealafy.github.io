@@ -1,28 +1,96 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let idade = document.getElementById('idade');
-    let periodo = document.getElementById('periodo');
+function getFirstElementFromHTMLCollectionByClassName(id) {
+    return document.getElementsByClassName(id).item(0);
+}
 
-    let date = new Date();
-    let currentYear = date.getFullYear();
-    let baseYear = currentYear - 2024;
-    let periodCounter = baseYear * 2;
-    let currentMonth = date.getMonth();
-    console.log(currentMonth);
+function ShouldShowCertificationField(fieldToShow, isShowing) {
+    let certificationsField = getFirstElementFromHTMLCollectionByClassName(fieldToShow);
+    if (!isShowing) {
+        certificationsField.style.display = 'block';
+        return !isShowing;
+    }
+    certificationsField.style.display = 'none';
+    return !isShowing;
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let htmlCSSShowCertifications = false
+    let javaShowCertifications = false
+    let linuxShowCertifications = false
+    let portugolShowCertifications = false
+    let hardwareArchitectureShowCertifications = false
+
+    let idade = document.getElementById('idade')
+    let periodo = document.getElementById('periodo')
+
+    let date = new Date()
+    let currentYear = date.getFullYear()
+    let baseYear = currentYear - 2024
+    let periodCounter = baseYear * 2
+    let currentMonth = date.getMonth()
 
     if (currentMonth === 0 || currentMonth === 5) {
-        periodCounter++;
+        periodCounter++
     }
 
-    let baseAge = ((new Date()).getFullYear() - 2005);
+    let baseAge = ((new Date()).getFullYear() - 2005)
     if (currentMonth < 10) {
-        baseAge--;
+        baseAge--
     }
 
     periodo.innerHTML = periodCounter.toString();
-    idade.innerHTML = baseAge.toLocaleString('pt-BR');
+    idade.innerHTML = baseAge.toLocaleString('pt-BR')
+
+    let htmlCssButton = document.getElementById('AboutHTMLandCSSCertifications')
+    htmlCssButton.addEventListener('click', () => {
+        htmlCSSShowCertifications = ShouldShowCertificationField(
+            "AboutHTMLandCSSCertifications", htmlCSSShowCertifications
+        );
+    })
+
+    let javaButton = document.getElementById('AboutJavaCertifications')
+    javaButton.addEventListener('click', () => {
+        javaShowCertifications = ShouldShowCertificationField(
+            "AboutJavaCertifications",
+            javaShowCertifications
+        )
+    })
+
+    let linuxButton = document.getElementById('AboutLinuxCertifications')
+    linuxButton.addEventListener('click', () => {
+        linuxShowCertifications = ShouldShowCertificationField(
+            "AboutLinuxCertifications",
+            linuxShowCertifications
+        )
+    })
+
+    let portugolButton = document.getElementById('AboutPortugolCertifications')
+    portugolButton.addEventListener('click', () => {
+        portugolShowCertifications = ShouldShowCertificationField(
+            "AboutPortugolCertifications",
+            portugolShowCertifications
+        )
+    })
+    let hardwareArchitectureButton = document.getElementById('HardwareAchitectureCertifications')
+    hardwareArchitectureButton.addEventListener('click', () => {
+        hardwareArchitectureShowCertifications = ShouldShowCertificationField(
+            "AboutHardwareArchitectureCertifications",
+            hardwareArchitectureShowCertifications
+        )
+    })
 })
 
 
 function changeMode() {
-    
+    let currentTheme = getInverseTheme(localStorage.getItem('theme'));
+    localStorage.setItem('theme', currentTheme);
+    document.querySelector('html').setAttribute("data-theme", currentTheme);
+    console.log(currentTheme);
+}
+
+function getInverseTheme(currentTheme) {
+    if (currentTheme === "light") {
+        return "dark";
+    }
+    return "light";
 }
