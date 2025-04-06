@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     periodo.innerHTML = periodCounter.toString();
     idade.innerHTML = baseAge.toLocaleString('pt-BR')
 
+    document.querySelector('html').setAttribute("data-theme", "light");
+
     let htmlCssButton = document.getElementById('AboutHTMLandCSSCertifications')
     htmlCssButton.addEventListener('click', () => {
         htmlCSSShowCertifications = ShouldShowCertificationField(
@@ -82,14 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function changeMode() {
+    console.log(localStorage.getItem('theme'))
     let currentTheme = getInverseTheme(localStorage.getItem('theme'));
+    console.log(currentTheme)
     localStorage.setItem('theme', currentTheme);
     document.querySelector('html').setAttribute("data-theme", currentTheme);
     console.log(currentTheme);
 }
 
 function getInverseTheme(currentTheme) {
-    if (currentTheme === "light") {
+    if (currentTheme === "light" || currentTheme === null) {
         return "dark";
     }
     return "light";

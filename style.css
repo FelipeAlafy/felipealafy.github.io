@@ -336,7 +336,11 @@ button.ShowCertifications:hover {
 }
 
 #linguas, #html-css, #java, #linux, #portugol, #hardwareArchitecture {
-    display: inline-block;
+    display: block;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin: 10px;
 
     img {
         display: inline-block;
