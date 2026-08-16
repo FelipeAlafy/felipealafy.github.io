@@ -1,0 +1,573 @@
+html {
+    /*Faz com que o scroll fique mais suave especialmente ao clicar no menu de navegação.*/
+    scroll-behavior: smooth;
+}
+
+body {
+    /*Definição básica do body*/
+    position: relative;
+    background-color: #0B1222;
+    color: whitesmoke;
+    font-family: "Mozilla Text ExtraLight", sans-serif;
+    h1 {
+        font-family: "Mozilla Headline ExtraLight", serif;
+        letter-spacing: 2px;
+    }
+}
+body > header {
+    /*Configurando o header, com border, box-shadow, e drop-filter que criará o efeito de frosted glass*/
+    z-index: 1;
+    border-bottom: solid 1px #244D9288;
+    background: linear-gradient(to right, #0B122288, #0B1222FF);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 15px 5px #244D9255;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    h1 {
+        margin-left: 16px;
+        display: inline;
+    }
+    span {
+        color: #244D92
+    }
+
+    nav {
+        /*Configurando os itens do menu de navegação*/
+        text-align: center;
+        width: 100%;
+        display: inline;
+        ul {
+            display: inline;
+            text-decoration: none;
+            left: 0;
+            li {
+                display: inline;
+                a {
+                    text-decoration: none;
+                    color: gray;
+                    padding: 5px 10px;
+                    transition: all 0.3s ease;
+                }
+                a:hover {
+                    color: whitesmoke;
+                }
+
+                a.alive {
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}
+
+body > main {
+    /*Configuração do conteúdo principal.*/
+    position: relative;
+    z-index: 0;
+    top: 50px;
+    margin-left: 10px;
+
+    h1 > span {
+        z-index: 1;
+        color: #244D92;
+    }
+
+    h2 > span {
+        z-index: 1;
+        color: #4285F4;
+    }
+
+    section {
+        z-index: 0;
+        border-radius: 25px;
+        padding-left: 10px;
+        box-shadow: 0 0 15px 5px #244D9255;
+    }
+
+    /*Definindo o estilo base dos Articles.*/
+    article {
+        z-index: 1;
+        text-align: justify;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        svg {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            fill: whitesmoke;
+            transition: fill 0.5s ease;
+            margin-right: 10px;
+        }
+
+        hr {
+            fill: #244D92;
+        }
+
+        /*Cria o efeito de hover para os svg das tecnologias.*/
+        svg#kotlin:hover {
+            fill: #7F52FF;
+            scale: 1.2;
+        }
+        svg#compose:hover {
+            fill: #4285F4;
+            scale: 1.2;
+        }
+        svg#gnome:hover {
+            fill: #4A86CF;
+            scale: 1.2;
+        }
+        svg#gnome:hover {
+            fill: #4A86CF;
+            scale: 1.2;
+        }
+
+        svg#git:hover {
+            fill: #F03C2E;
+            scale: 1.2;
+        }
+
+        svg#github:hover {
+            fill: #FFFFFF;
+            scale: 1.2;
+        }
+
+        svg#golang:hover {
+            fill: #FFFFFF;
+            scale: 1.2;
+        }
+
+        svg#swift:hover {
+            fill: #F05138;
+            scale: 1.2;
+        }
+
+        svg#android_studio:hover {
+            fill: #3DDC84;
+            scale: 1.2;
+        }
+
+        svg#sqlite:hover {
+            fill: #003B57;
+            scale: 1.2;
+        }
+
+        svg#mysql:hover {
+            fill: #4479A1;
+            scale: 1.2;
+        }
+
+        svg#nextcloud:hover {
+            fill: #0082C9;
+            scale: 1.2;
+        }
+
+        svg#gtk:hover {
+            fill: #7FE719;
+            scale: 1.2;
+        }
+
+
+        /*Inicio das customizações da parte profissional*/
+        p {
+            text-align: justify;
+            margin-right: 20px;
+            margin-left: 12px;
+            font-size: 14pt;
+        }
+
+        h2.worktitle {
+            display: inline-block;
+        }
+
+        span.date {
+            background-color: #50909090;
+            font-size: 10pt;
+            padding: 4px;
+            border-radius: 20px;
+            display: inline-block;
+            color: white;
+            margin-left: 10px;
+        }
+    }
+
+    article#professional {
+        display: block;
+        width: 100%;
+
+        p#workposition-administrative {
+            display: none;
+        }
+
+        p#workposition-apprentice {
+            display: none;
+        }
+    }
+
+    div.workpositions {
+        display: flex;
+        div {
+            z-index: 2;
+            display: flex;
+            background-color: #244D92FF;
+            width: 48px;
+            height: 48px;
+            font-size: 16pt;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            p {
+                display: none;
+            }
+            transition: width 0.7s ease, height 0.7s ease, background-color 0.2s ease;
+        }
+
+        div.active {
+            border-radius: 20px;
+            align-items: center;
+            justify-content: start;
+            width: 300px;
+            background-color: #FA586A;
+            p {
+                display: inline-block;
+            }
+        }
+
+        div.workpositions-middle {
+            z-index: 2;
+            margin-left: 64px;
+            margin-right: 64px;
+        }
+
+        div.workposition-end {
+            margin-left: 24px;
+        }
+
+        div.workposition-background {
+            position: absolute;
+            z-index: 0;
+            width: 29%;
+            height: 28px;
+            border-radius: 16px;
+            margin-top: 9px;
+            background-color: #244D9255;
+        }
+
+    }
+
+    /*Configurações bases da seção*/
+    #about_me {
+        display: inline-block;
+        width: 50%;
+        margin-top: 40px;
+    }
+
+    /*Configurações dos hobbies*/
+    div.hobbies_tooltip {
+        vertical-align: top;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: start;
+        overflow: hidden;
+        width: 64px;
+        height: 64px;
+        transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+        p {
+            display: none;
+        }
+    }
+
+    div.hobbies_tooltip:hover {
+        width: 256px;
+        height: 320px;
+        border-radius: 10px;
+        background-color: #244D9255;
+        color: white;
+        padding: 4px;
+        p {
+            display: block;
+        }
+    }
+
+    div#music_hobby_tooltip:hover {
+        background-color: #FA586A;
+        width: 256px;
+        height: 340px;
+        border-radius: 10px;
+        color: white;
+        padding: 4px;
+        p {
+            display: block;
+        }
+    }
+
+    div#videogame_hobby_tooltip:hover {
+        background-color: #107C10;
+        width: 256px;
+        height: 320px;
+        border-radius: 10px;
+        color: white;
+        padding: 4px;
+        p {
+            display: block;
+        }
+    }
+
+    div#literature_hobby_tooltip:hover {
+        background-color: #1E1E1E;
+        width: 256px;
+        height: 320px;
+        border-radius: 10px;
+        color: white;
+        padding: 4px;
+        p {
+            display: block;
+        }
+    }
+
+    /*Configuração do terminal simulando código kotlin*/
+    aside {
+        margin-top: 100px;
+        float: right;
+        height: 100%;
+        p {
+            background-color: #2D2D2D;
+            height: 30px;
+            margin: 0;
+            align-content: center;
+            padding: 0 0 0 10px;
+            border-radius: 10px 10px 0 0;
+            display: inline-block;
+        }
+
+        background-color: #1E1E1E;
+
+        display: inline-block;
+        width: 45%;
+        min-width: 25%;
+        border: 3px solid  #2D2D2D;
+        border-radius: 10px;
+
+        div.developer_window {
+            background-color: #2D2D2D;
+            height: 30px;
+            margin: 0;
+            align-content: center;
+            padding: 0 0 0 10px;
+            display: block;
+        }
+
+        /*Criação da clássica Traffic Lights*/
+        div.red-light {
+            display: inline-block;
+            background-color: #EF4444;
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+            border-radius: 50%;
+        }
+
+        div.yellow-light {
+            display: inline-block;
+            background-color: #EAB309;
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+            border-radius: 50%;
+        }
+
+        div.green-light {
+            display: inline-block;
+            background-color: #22C55E;
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+            border-radius: 50%;
+        }
+
+        /*Lógica para colorir o código kotlin, como se fosse uma IDE de verdade.*/
+        pre {
+            text-align: left;
+            code {
+                span.rose {
+                    color: #8F5A9E;
+                }
+                span.lightblue {
+                    color: #4B7FAA;
+                }
+                span.green {
+                    color: #718F5C;
+                }
+
+                span.orange {
+                    color: #CC7832;
+                }
+
+                span.italic {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    /*Definições básicas da seção formação*/
+    section#formation {
+        margin-top: 20px;
+        padding: 10px;
+
+        h3 {
+            display: inline-block;
+        }
+    }
+
+    /*Definições básicas da seção portifólio*/
+    section#portfolio {
+        margin-top: 20px;
+        padding: 10px;
+
+        h1 {
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 48pt;
+            a {
+                text-decoration: none;
+                color: #238AE7;
+            }
+            color: #238AE7;
+        }
+        
+        article {
+            display: inline-block;
+            width: 60%;
+        }
+
+        /*Assim como o terminal do kotlin, aqui simulamos um video player.*/
+        aside {
+            margin-top: 0;
+            display: inline-block;
+            width: 10%;
+            height: 25%;
+            align-content: center;
+            justify-content: center;
+            video {
+                width: 100%;
+                height: 20%;
+            }
+        }
+    }
+
+    /*Definições básicas da seção formação*/
+    section#contact {
+        margin-top: 20px;
+        padding: 10px;
+
+        form {
+            display: flex;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+
+            margin-left: 10px;
+
+            div {
+                display: inline-block;
+                height: 100%;
+                p {
+                    height: 100%;
+                    margin: 0 0 0 60px;
+                    display: inline-block;
+                    font-size: 128pt;
+                    align-content: center;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        fieldset {
+            display: inline-block;
+            border: solid 1px #244D9288;
+            border-radius: 10px;
+
+            max-width: 25%;
+
+            input {
+                width: 300px;
+                padding: 5px;
+                margin: 10px;
+                border: none;
+                border-radius: 25px;
+                color: whitesmoke;
+                background-color: #244D9288;
+            }
+
+            input:focus {
+                background-color: #FA586A;
+            }
+
+            textarea {
+                width: 300px;
+                padding: 5px;
+                margin: 10px;
+                background-color: #244D9288;
+                color: whitesmoke;
+                border: none;
+                border-radius: 10px;
+                overflow: hidden;
+                display: block;
+            }
+
+            textarea:focus {
+                background-color: #FA586A;
+            }
+
+            button {
+                display: block;
+                background-color: #244D9288;
+                color: whitesmoke;
+                border: none;
+                border-radius: 10px;
+                width: 100%;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            button:hover {
+                background-color: #FA586A;
+            }
+        }
+    }
+}
+
+/*Configurações do rodapé*/
+body > footer {
+    position: relative;
+    margin-top: 100px;
+    padding-top: 10px;
+    width: 100%;
+    border-bottom: solid 2px #244D9288;
+    border-radius: 25px;
+    box-shadow: 0 0 15px 5px #244D9255;
+
+    p {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    svg {
+        display: inline-block;
+        padding-left: 50px;
+        fill: whitesmoke;
+        width: 24px;
+        height: 24px;
+    }
+}

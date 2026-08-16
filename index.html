@@ -1,406 +1,263 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe Alafy - Software Engineer & Android Developer</title>
-    <meta name="description" content="Portfólio de Felipe Alafy, Engenheiro de Software focado no ecossistema Android Nativo, Arquitetura de Sistemas e Open Source.">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Importação da Família Mozilla (Branding) e JetBrains (Code) -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
-
-    <!-- Syntax Highlighting para o toque de "Engenheiro" -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/kotlin.min.js"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Mozilla Text', 'sans-serif'],
-                        serif: ['Mozilla Headline', 'serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#0B1120',
-                            card: '#1E293B',
-                            primary: '#3B82F6', // Blue 500
-                            secondary: '#8B5CF6', // Violet 500
-                            accent: '#10B981', // Emerald 500
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #0B1120;
-            color: #F8FAFC;
-        }
-        .glow-bg {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .code-window {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.1);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B1120; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
-    </style>
+    <title>Felipe Alafy - Portifolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪪</text></svg>">
+    <script src="./script.js" defer></script>
 </head>
-<body class="antialiased relative overflow-x-hidden selection:bg-brand-primary selection:text-white">
-
-<!-- Efeitos de Fundo -->
-<div class="glow-bg top-[-10%] left-[-10%]"></div>
-<div class="glow-bg bottom-[20%] right-[-10%] bg-brand-secondary/10"></div>
-<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] z-[-1]"></div>
-
-<!-- NAVBAR -->
-<nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold font-mono tracking-tighter text-white hover:text-brand-primary transition-colors">
-            <span class="text-brand-primary">~/</span>felipealafy
-        </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-            <a href="#about" class="hover:text-white transition-colors">Sobre</a>
-            <a href="#skills" class="hover:text-white transition-colors">Stack</a>
-            <a href="#projects" class="hover:text-white transition-colors">Projetos</a>
-            <a href="#experience" class="hover:text-white transition-colors">Experiência</a>
-        </div>
-        <a href="mailto:profissional@felipealafy.net" class="hidden md:inline-flex px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium transition-colors border border-white/5">
-            Contato
-        </a>
-    </div>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="min-h-screen flex items-center justify-center pt-20 pb-12 px-6">
-    <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Left: Text -->
-        <div class="flex flex-col items-start z-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-mono font-bold mb-6">
-                <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
-                Disponível para oportunidades
+<body>
+<header>
+    <h1><span># </span>felipealafy<span>>></span></h1>
+    <nav>
+        <ul>
+            <li><a href="#about_me">Sobre mim</a></li>
+            <li><a href="#formation">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!--Sobre mim-->
+    <section id="about_me">
+        <h1>Quem sou <span>eu</span>?</h1>
+        <article>
+            <p>Me chamo Felipe Alafy, um desenvolvedor independente de software apaixonado pelo mundo da tecnológia.
+                Atualmente estou trabalhando no desenvolvimento de um aplicativo para <span>Android</span>, chamado
+                Student Planner.</p>
+            <h2><span>Técnologias</span> favoritas</h2>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="kotlin"><title>Kotlin</title><path d="M24 24H0V0h24L12 12Z"/></svg>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="compose"><title>Jetpack Compose</title><path d="M12.135.003a2.577 2.577 0 0 0-1.42.344L2.55 5.06a2.577 2.577 0 0 0-.953.967l3.957 2.17a1.765 1.765 0 0 1 .603-.588l4.951-2.86a1.761 1.761 0 0 1 1.76 0l4.951 2.86a1.753 1.753 0 0 1 .526.46l3.921-2.265a2.577 2.577 0 0 0-.816-.744L13.291.347a2.577 2.577 0 0 0-1.152-.34Zm-.145 4.912a1.36 1.36 0 0 0-.68.182L6.36 7.953a1.345 1.345 0 0 0-.454.435l1.92 1.055a1.05 1.05 0 0 1 .31-.275l3.34-1.928a1.054 1.054 0 0 1 1.051 0l3.336 1.928a1.066 1.066 0 0 1 .238.199l.018-.01-.002-.002 1.877-1.08a1.353 1.353 0 0 0-.373-.322l-4.95-2.86a1.357 1.357 0 0 0-.68-.178Zm10.432 1.149-3.92 2.26a1.757 1.757 0 0 1 .2.812v5.715c0 .627-.332 1.21-.88 1.528l-4.95 2.86a1.761 1.761 0 0 1-.64.214v4.524a2.577 2.577 0 0 0 1.059-.313l8.162-4.713a2.577 2.577 0 0 0 1.289-2.23V7.297a2.577 2.577 0 0 0-.318-1.228Zm-20.937.238a2.577 2.577 0 0 0-.227.99v9.43c0 .918.491 1.767 1.293 2.229l8.162 4.713a2.57 2.57 0 0 0 1.225.336v-4.531a1.761 1.761 0 0 1-.833-.235L6.156 16.38a1.765 1.765 0 0 1-.877-1.528V9.136a1.776 1.776 0 0 1 .131-.676Zm16.67 2.223-1.89 1.092a1.058 1.058 0 0 1 .124.46v3.856c0 .378-.2.72-.526.907l-3.336 1.93a1.04 1.04 0 0 1-.295.107v2.17c.152-.027.304-.078.44-.157l4.949-2.859a1.36 1.36 0 0 0 .68-1.18V9.136a1.36 1.36 0 0 0-.147-.607Zm-12.387.13a1.36 1.36 0 0 0-.088.481v5.715a1.36 1.36 0 0 0 .68 1.18l4.95 2.86c.194.112.412.166.627.177v-2.174a1.054 1.054 0 0 1-.46-.123L8.14 14.843a1.054 1.054 0 0 1-.532-.908v-3.853a.99.99 0 0 1 .077-.38l-.034-.013z"/></svg>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="gnome"><title>GNOME</title><path d="M19.703 0c-4.99 0-5.927 7.111-3.12 7.111 2.81 0 8.113-7.111 3.12-7.111M11.99.872q-.119-.001-.25.016c-2.811.364-1.82 5.25-.324 5.34 1.449.09 3.032-5.347.574-5.356M7.123 2.803a1.4 1.4 0 0 0-.488.114c-2.259.933-.344 4.776.921 4.519 1.168-.24 1.319-4.671-.433-4.632Zm-3.6 3.016a1.05 1.05 0 0 0-.634.215c-1.807 1.248.607 4.269 1.671 3.799.93-.41.338-3.967-1.037-4.014m10.032 2.309c-3.835.033-8.716 1.978-9.567 5.784C3.044 18.14 7.875 24 12.915 24c2.48 0 5.34-2.24 5.875-5.077.409-2.163-4.81-1.295-4.623.137.225 1.715-1.258 2.561-2.711 1.454-4.623-3.52 7.658-5.276 6.847-10.086-.263-1.56-2.29-2.322-4.748-2.301Z"/></svg>
+            <hr>
+            <h2>Meus <span>Hobbies</span></h2>
+            <div class="hobbies_tooltip">
+                <svg class="hobbies_icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-360h96q19 0 32.5-13.5T382-406v-148q0-19-13.5-32.5T336-600h-96v240Zm46-46v-148h50v148h-50Zm149 46h98v-46h-82v-52h52v-46h-52v-50h82v-46h-98q-13 0-21.5 8.5T405-570v180q0 13 8.5 21.5T435-360Zm228.5-9.5Q673-378 676-391l56-209h-48l-43 164-43-164h-48l56 209q3 13 12.5 21.5T641-361q13 0 22.5-8.5ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                <p>Desenvolvimento de softwares é meu hobbie favorito, onde consigo me expressar criativamente, como neste website.</p>
             </div>
-
-            <h1 class="font-serif text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                Engenharia de Software <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
-                        Nativa & Escalável.
-                    </span>
-            </h1>
-
-            <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-                Sou o <strong class="text-white font-semibold">Felipe Alafy</strong>, desenvolvedor focado no ecossistema Android (Kotlin/Compose) e em criar arquiteturas resilientes que resolvem problemas reais de negócio.
+            <div class="hobbies_tooltip" id="music_hobby_tooltip">
+                <svg class="hobbies_icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M127-167q-47-47-47-113t47-113q47-47 113-47 23 0 42.5 5.5T320-418v-342l480-80v480q0 66-47 113t-113 47q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T720-498v-165l-320 63v320q0 66-47 113t-113 47q-66 0-113-47Z"/></svg>
+                <p>Música é uma grande paixão, e eu sou movido pelas bandas de músicas alternativas brasileiras como Lupe de Lupe, Adoravél Clichê e Fernando Motta.<br>Sendo meu album favorito Vocação do Lupe de Lupe.</p>
+            </div>
+            <div class="hobbies_tooltip" id="videogame_hobby_tooltip">
+                <svg class="hobbies_icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm3-80q19 0 34.5-10t23.5-27l28-57q15-31 44-48.5t63-17.5h190q34 0 63 18t45 48l28 57q8 17 23.5 27t34.5 10q28 0 48-18.5t21-46.5q0 1-2-19l-84-335q-7-27-28-44t-49-17H285q-28 0-49.5 17T208-659l-84 335q-2 6-2 18 0 28 20.5 47t49.5 19Zm376.5-291.5Q580-543 580-560t-11.5-28.5Q557-600 540-600t-28.5 11.5Q500-577 500-560t11.5 28.5Q523-520 540-520t28.5-11.5Zm80-80Q660-623 660-640t-11.5-28.5Q637-680 620-680t-28.5 11.5Q580-657 580-640t11.5 28.5Q603-600 620-600t28.5-11.5Zm0 160Q660-463 660-480t-11.5-28.5Q637-520 620-520t-28.5 11.5Q580-497 580-480t11.5 28.5Q603-440 620-440t28.5-11.5Zm80-80Q740-543 740-560t-11.5-28.5Q717-600 700-600t-28.5 11.5Q660-577 660-560t11.5 28.5Q683-520 700-520t28.5-11.5Zm-367 63Q370-477 370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460q13 0 21.5-8.5ZM480-480Z"/></svg>
+                <p>Videogame é a minha melhor distração após dias exaustivos de trabalho. Sendo assim, adoro jogar FPS e RGPs como Red Dead Redemption e Halo.</p>
+            </div>
+            <div class="hobbies_tooltip" id="literature_hobby_tooltip">
+                <svg class="hobbies_icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M300-80q-58 0-99-41t-41-99v-520q0-58 41-99t99-41h500v600q-25 0-42.5 17.5T740-220q0 25 17.5 42.5T800-160v80H300Zm-60-267q14-7 29-10t31-3h20v-440h-20q-25 0-42.5 17.5T240-740v393Zm160-13h320v-440H400v440Zm-160 13v-453 453Zm60 187h373q-6-14-9.5-28.5T660-220q0-16 3-31t10-29H300q-26 0-43 17.5T240-220q0 26 17 43t43 17Z"/></svg>
+                <p>Leitura também é uma atividade que eu gosto muito, leio tanto literatura técnica quanto ficção. Neste sentido, meu livro favorito é <strong>O Lobo do Mar</strong> de Jack London.</p>
+            </div>
+            <hr>
+        </article>
+        <article id="professional">
+            <h1>Trajetória <span>Profissional</span></h1>
+            <h2 class="worktitle">XCMG Brasil Indústria</h2>
+            <span class="date">Março de 2024 - Presente</span>
+            <div class="workpositions">
+                <div class="workposition-background"></div>
+                <div class="workposition-end active" id="workposition-aftersales-div">🚀 <p>Assistente de Pós-Vendas</p></div>
+                <div class="workpositions-middle" id="workposition-administrative-div">⚙️ <p>Auxiliar Administrativo</p></div>
+                <div class="workposition-start" id="workposition-apprentice-div">🚪 <p>Jovem Aprendiz</p></div>
+            </div>
+            <p id="workposition-aftersales">
+                Atuo atualmente como assistente de Pós-Vendas Serviços na XCMG Brasil Indústria, onde sou responsável
+                por controlar KPIs do departamento, prestar suporte técnico em relação a Microsoft Dynamics 365 e realizar
+                analise de garantias.
             </p>
-
-            <div class="flex flex-wrap items-center gap-4">
-                <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-primary hover:bg-blue-600 text-white font-semibold transition-colors shadow-lg shadow-brand-primary/25">
-                    Ver Projetos
-                </a>
-                <a href="https://github.com/FelipeAlafy" target="_blank" class="px-6 py-3 rounded-lg bg-brand-card hover:bg-slate-800 text-white font-semibold transition-colors border border-slate-700 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/felipe-alafy" target="_blank" class="px-6 py-3 rounded-lg bg-brand-card hover:bg-slate-800 text-white font-semibold transition-colors border border-slate-700 flex items-center gap-2">
-                    <svg class="w-5 h-5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    LinkedIn
-                </a>
-            </div>
+            <p id="workposition-administrative">
+                Este foi meu segundo cargo na XCMG, onde era resposável por atividades relacionados a administração geral
+                dos colaborares produtivos do departamento de retrabalho e pintura. Neste cargo também atuei com controle
+                de estoque via TOTVS, requisições e solicitações de RH para um grande volume de funcionários.
+            </p>
+            <p id="workposition-apprentice">
+                Este foi meu primeiro cargo na XCMG, onde atuei como jovem aprendiz cursando eletromecânica, fiquei nesta
+                posição por aproximadamente 5 meses. Nele também era responsável pelo cálculo e controle de KPIs conforme
+                a ISO 9001.
+            </p>
+        </article>
+    </section>
+    <aside>
+        <div class="developer_window">
+            <div class="red-light"></div>
+            <div class="yellow-light"></div>
+            <div class="green-light"></div>
+            <p>Developer.kt</p>
         </div>
 
-        <!-- Right: Code Window Mockup -->
-        <div class="hidden lg:block relative z-10 perspective-1000">
-            <div class="code-window bg-[#1E1E1E] rounded-xl overflow-hidden border border-slate-700/50 transform rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-0 transition-transform duration-700">
-                <!-- Window Header -->
-                <div class="bg-[#2D2D2D] px-4 py-3 flex items-center gap-2 border-b border-black/20">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <span class="ml-4 text-xs font-mono text-slate-400">Developer.kt</span>
-                </div>
-                <!-- Window Body -->
-                <div class="p-6 text-sm">
-                        <pre><code class="language-kotlin font-mono bg-transparent p-0">
-@Inject
-class FelipeAlafy(
-    val location: String = "Pouso Alegre, MG",
-    val status: String = "Computer Science Student"
-) : SoftwareEngineer {
-
-    override val stack = listOf(
-        "Kotlin",
-        "Jetpack Compose",
-        "Room Database",
-        "Clean Architecture",
-        "SQL & Cloud"
-    )
-
-    override suspend fun solveProblem(
-        challenge: BusinessRequirement
-    ): Result&lt;Solution&gt; = withContext(Dispatchers.IO) {
-        // Bridges the gap between business needs
-        // and scalable engineering solutions.
-        val architecture = designArchitecture(challenge)
-        val code = writeCleanCode(architecture)
-
-        return@withContext Result.success(code)
+        <pre>
+            <code>
+    <span class="rose">data class</span> FelipeAlafy(
+        <span class="rose">val</span> <span class="lightblue">location: String</span> = <span class="green">"Pouso Alegre, MG"</span>,
+        <span class="rose">val</span> <span class="lightblue">bachelor: String</span> = <span class="green">"Computer Science Student"</span>
+        <span class="rose">val</span> <span class="lightblue">MainStack</span> = listOf(<span class="green">"Kotlin"</span>, <span class="green">"Jetpack Compose"</span>)
+        <span class="rose">val</span> <span class="lightblue">OtherKnowleadges</span> = listOf(<span class="green">"Room"</span>, <span class="green">"Dagger Hilt"</span>, <span class="green">"SQL"</span>)
+    ) {
+        <span class="orange">fun</span> <span class="italic">develop</span>(project: StudentPlannerProject) {
+            println(<span class="green">"Developer Card:"</span>)
+            println(<span class="green">"Name: Felipe Alafy Rodrigues Silva"</span>)
+            println(<span class="orange">this.</span>bachelor)
+            println(<span class="orange">this.</span>MainStack)
+            println(<span class="green">"E-mail: pessoal@felipealafy.net"</span>)
+        }
     }
-}
-                        </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </code>
+        </pre>
+    </aside>
 
-<!-- SOBRE & SKILLS -->
-<section id="about" class="py-24 bg-brand-card/30 border-y border-white/5 relative">
-    <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-12 gap-16">
-
-            <!-- About Me -->
-            <div class="lg:col-span-7">
-                <h2 class="text-sm font-mono text-brand-primary tracking-widest uppercase mb-3">01. Sobre Mim</h2>
-                <h3 class="font-serif text-3xl font-bold text-white mb-6">Unindo Código e Negócios.</h3>
-
-                <div class="space-y-4 text-slate-400 leading-relaxed">
-                    <p>
-                        Sou bacharelando em Ciência da Computação pela UNINTER e atuo na intersecção entre a Engenharia de Software e as Regras de Negócio.
+    <!--Formação-->
+    <section id="formation">
+        <h1>Minha <span>Formação</span></h1>
+        <article>
+            <h2>Cursos <span>Superiores</span></h2>
+            <ul>
+                <li>
+                    <h3>Ciência da computação</h3>
+                    <span class="date">Janeiro de 2025 - Agosto de 2028</span>
+                    <p>Atualmente curso ciência da computação na Uninter.<br>
+                        Dentre os momentos memoráveis da graduação está minha participação no curso <strong>Google Cloud Computing Fundations</strong>,
+                        o desenvolvimento paralelo do meu projeto individual, o <strong>Student Planner</strong>, que é fruto da necessidade de uma melhor maneira de computar minhas
+                        atividades acadêmicas, e que veio a se integrar como parte das minhas atividades extensionista, e a participação do evento <strong>Hack Town</strong> em Santa Rita do Sapucaí - MG, onde
+                        tive a possibilidade de conhecer inúmeros palestrantes e colegas de faculdade.
                     </p>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2><span>Línguas</span> estrangeiras</h2>
+            <p><strong>🇨🇦Inglês - B2</strong> - Alura Língua</p>
+        </article>
+        <article>
+            <h2>Minha <span>Stack</span></h2>
+            <svg id="kotlin" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Kotlin</title><path d="M24 24H0V0h24L12 12Z"/></svg>
+            <svg id="compose" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Jetpack Compose</title><path d="M12.135.003a2.577 2.577 0 0 0-1.42.344L2.55 5.06a2.577 2.577 0 0 0-.953.967l3.957 2.17a1.765 1.765 0 0 1 .603-.588l4.951-2.86a1.761 1.761 0 0 1 1.76 0l4.951 2.86a1.753 1.753 0 0 1 .526.46l3.921-2.265a2.577 2.577 0 0 0-.816-.744L13.291.347a2.577 2.577 0 0 0-1.152-.34Zm-.145 4.912a1.36 1.36 0 0 0-.68.182L6.36 7.953a1.345 1.345 0 0 0-.454.435l1.92 1.055a1.05 1.05 0 0 1 .31-.275l3.34-1.928a1.054 1.054 0 0 1 1.051 0l3.336 1.928a1.066 1.066 0 0 1 .238.199l.018-.01-.002-.002 1.877-1.08a1.353 1.353 0 0 0-.373-.322l-4.95-2.86a1.357 1.357 0 0 0-.68-.178Zm10.432 1.149-3.92 2.26a1.757 1.757 0 0 1 .2.812v5.715c0 .627-.332 1.21-.88 1.528l-4.95 2.86a1.761 1.761 0 0 1-.64.214v4.524a2.577 2.577 0 0 0 1.059-.313l8.162-4.713a2.577 2.577 0 0 0 1.289-2.23V7.297a2.577 2.577 0 0 0-.318-1.228Zm-20.937.238a2.577 2.577 0 0 0-.227.99v9.43c0 .918.491 1.767 1.293 2.229l8.162 4.713a2.57 2.57 0 0 0 1.225.336v-4.531a1.761 1.761 0 0 1-.833-.235L6.156 16.38a1.765 1.765 0 0 1-.877-1.528V9.136a1.776 1.776 0 0 1 .131-.676Zm16.67 2.223-1.89 1.092a1.058 1.058 0 0 1 .124.46v3.856c0 .378-.2.72-.526.907l-3.336 1.93a1.04 1.04 0 0 1-.295.107v2.17c.152-.027.304-.078.44-.157l4.949-2.859a1.36 1.36 0 0 0 .68-1.18V9.136a1.36 1.36 0 0 0-.147-.607Zm-12.387.13a1.36 1.36 0 0 0-.088.481v5.715a1.36 1.36 0 0 0 .68 1.18l4.95 2.86c.194.112.412.166.627.177v-2.174a1.054 1.054 0 0 1-.46-.123L8.14 14.843a1.054 1.054 0 0 1-.532-.908v-3.853a.99.99 0 0 1 .077-.38l-.034-.013z"/></svg>
+            <svg id="git" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Git</title><path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></svg>
+            <svg id="github" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <svg id="golang" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GoLand</title><path d="M0 0v24h24V0Zm6.764 3a5.448 5.448 0 0 1 3.892 1.356L9.284 6.012A3.652 3.652 0 0 0 6.696 5c-1.6 0-2.844 1.4-2.844 3.08v.028c0 1.812 1.244 3.14 3 3.14a3.468 3.468 0 0 0 2.048-.596V9.228H6.708v-1.88H11v4.296a6.428 6.428 0 0 1-4.228 1.572c-3.076 0-5.196-2.164-5.196-5.092v-.028A5.08 5.08 0 0 1 6.764 3Zm10.432 0c3.052 0 5.244 2.276 5.244 5.088v.028a5.116 5.116 0 0 1-5.272 5.12c-3.056-.02-5.248-2.296-5.248-5.112v-.028A5.116 5.116 0 0 1 17.196 3Zm-.028 2A2.96 2.96 0 0 0 14.2 8.068v.028a3.008 3.008 0 0 0 3 3.112 2.96 2.96 0 0 0 2.964-3.084v-.028A3.004 3.004 0 0 0 17.168 5ZM2.252 19.5h9V21h-9z"/></svg>
+            <svg id="swift" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Swift</title><path d="M7.508 0c-.287 0-.573 0-.86.002-.241.002-.483.003-.724.01-.132.003-.263.009-.395.015A9.154 9.154 0 0 0 4.348.15 5.492 5.492 0 0 0 2.85.645 5.04 5.04 0 0 0 .645 2.848c-.245.48-.4.972-.495 1.5-.093.52-.122 1.05-.136 1.576a35.2 35.2 0 0 0-.012.724C0 6.935 0 7.221 0 7.508v8.984c0 .287 0 .575.002.862.002.24.005.481.012.722.014.526.043 1.057.136 1.576.095.528.25 1.02.495 1.5a5.03 5.03 0 0 0 2.205 2.203c.48.244.97.4 1.498.495.52.093 1.05.124 1.576.138.241.007.483.009.724.01.287.002.573.002.86.002h8.984c.287 0 .573 0 .86-.002.241-.001.483-.003.724-.01a10.523 10.523 0 0 0 1.578-.138 5.322 5.322 0 0 0 1.498-.495 5.035 5.035 0 0 0 2.203-2.203c.245-.48.4-.972.495-1.5.093-.52.124-1.05.138-1.576.007-.241.009-.481.01-.722.002-.287.002-.575.002-.862V7.508c0-.287 0-.573-.002-.86a33.662 33.662 0 0 0-.01-.724 10.5 10.5 0 0 0-.138-1.576 5.328 5.328 0 0 0-.495-1.5A5.039 5.039 0 0 0 21.152.645 5.32 5.32 0 0 0 19.654.15a10.493 10.493 0 0 0-1.578-.138 34.98 34.98 0 0 0-.722-.01C17.067 0 16.779 0 16.492 0H7.508zm6.035 3.41c4.114 2.47 6.545 7.162 5.549 11.131-.024.093-.05.181-.076.272l.002.001c2.062 2.538 1.5 5.258 1.236 4.745-1.072-2.086-3.066-1.568-4.088-1.043a6.803 6.803 0 0 1-.281.158l-.02.012-.002.002c-2.115 1.123-4.957 1.205-7.812-.022a12.568 12.568 0 0 1-5.64-4.838c.649.48 1.35.902 2.097 1.252 3.019 1.414 6.051 1.311 8.197-.002C9.651 12.73 7.101 9.67 5.146 7.191a10.628 10.628 0 0 1-1.005-1.384c2.34 2.142 6.038 4.83 7.365 5.576C8.69 8.408 6.208 4.743 6.324 4.86c4.436 4.47 8.528 6.996 8.528 6.996.154.085.27.154.36.213.085-.215.16-.437.224-.668.708-2.588-.09-5.548-1.893-7.992z"/></svg>
+            <svg id="android_studio" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Android Studio</title><path d="M19.2693 10.3368c-.3321 0-.6026.2705-.6026.6031v9.8324h-1.7379l-3.3355-6.9396c.476-.5387.6797-1.286.5243-2.0009a2.2862 2.2862 0 0 0-1.2893-1.6248v-.8124c.0121-.2871-.1426-.5787-.4043-.7407-.1391-.0825-.2884-.1234-.4402-.1234a.8478.8478 0 0 0-.4318.1182c-.2701.1671-.4248.4587-.4123.7662l-.0003.721c-1.0149.3668-1.6619 1.4153-1.4867 2.5197a2.282 2.282 0 0 0 .5916 1.2103l-3.2096 6.9064H4.0928c-1.0949-.007-1.9797-.8948-1.9832-1.9896V5.016c-.0055 1.1024.8836 2.0006 1.9859 2.0062a2.024 2.024 0 0 0 .1326-.0037h14.7453s2.5343-.2189 2.8619 1.5392c-.2491.0287-.4449.2321-.4449.4889 0 .7115-.5791 1.2901-1.3028 1.2901h-.8183zM17.222 22.5366c.2347.4837.0329 1.066-.4507 1.3007-.1296.0629-.2666.0895-.4018.0927a.9738.9738 0 0 1-.3194-.0455c-.024-.0078-.046-.0209-.0694-.0305a.9701.9701 0 0 1-.2277-.1321c-.0247-.0192-.0495-.038-.0724-.0598-.0825-.0783-.1574-.1672-.21-.2757l-1.2554-2.6143-1.5585-3.2452a.7725.7725 0 0 0-.6995-.4443h-.0024a.792.792 0 0 0-.7083.4443l-1.5109 3.2452-1.2321 2.6464a.9722.9722 0 0 1-.7985.5795c-.0626.0053-.1238-.0024-.185-.0087-.0344-.0036-.069-.0053-.1025-.0124-.0489-.0103-.0954-.0278-.142-.0452-.0301-.0113-.0613-.0197-.0901-.0339-.0496-.0244-.0948-.0565-.1397-.0889-.0217-.0156-.0457-.0275-.0662-.045a.9862.9862 0 0 1-.1695-.1844.9788.9788 0 0 1-.0708-.9852l.8469-1.8223 3.2676-7.0314a1.7964 1.7964 0 0 1-.7072-1.1637c-.1555-.9799.5129-1.9003 1.4928-2.0559V9.3946a.3542.3542 0 0 1 .1674-.3155.3468.3468 0 0 1 .3541 0 .354.354 0 0 1 .1674.3155v1.159l.0129.0064a1.8028 1.8028 0 0 1 1.2878 1.378 1.7835 1.7835 0 0 1-.6439 1.7836l3.3889 7.0507.8481 1.7643zM12.9841 12.306c.0042-.6081-.4854-1.1044-1.0935-1.1085a1.1204 1.1204 0 0 0-.7856.3219 1.101 1.101 0 0 0-.323.7716c-.0042.6081.4854 1.1044 1.0935 1.1085h.0077c.6046 0 1.0967-.488 1.1009-1.0935zm-1.027 5.2768c-.1119.0005-.2121.0632-.2571.1553l-1.4127 3.0342h3.3733l-1.4564-3.0328a.274.274 0 0 0-.2471-.1567zm8.1432-6.7459l-.0129-.0001h-.8177a.103.103 0 0 0-.103.103v12.9103a.103.103 0 0 0 .0966.103h.8435c.9861-.0035 1.7836-.804 1.7836-1.79V9.0468c0 .9887-.8014 1.7901-1.7901 1.7901zM2.6098 5.0161v.019c.0039.816.6719 1.483 1.4874 1.4869a12.061 12.061 0 0 1 .1309-.0034h1.1286c.1972-1.315.7607-2.525 1.638-3.4859H4.0993c-.9266.0031-1.6971.6401-1.9191 1.4975.2417.0355.4296.235.4296.4859zm6.3381-2.8977L7.9112.3284a.219.219 0 0 1 0-.2189A.2384.2384 0 0 1 8.098 0a.219.219 0 0 1 .1867.1094l1.0496 1.8158a6.4907 6.4907 0 0 1 5.3186 0L15.696.1094a.2189.2189 0 0 1 .3734.2189l-1.0302 1.79c1.6671.9125 2.7974 2.5439 3.0975 4.4018l-12.286-.0014c.3004-1.8572 1.4305-3.488 3.0972-4.4003zm5.3774 2.6202a.515.515 0 0 0 .5271.5028.515.515 0 0 0 .5151-.5151.5213.5213 0 0 0-.8885-.367.5151.5151 0 0 0-.1537.3793zm-5.7178-.0067a.5151.5151 0 0 0 .5207.5095.5086.5086 0 0 0 .367-.1481.5215.5215 0 1 0-.734-.7341.515.515 0 0 0-.1537.3727z"/></svg>
+            <svg id="sqlite" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>SQLite</title><path d="M21.678.521c-1.032-.92-2.28-.55-3.513.544a8.71 8.71 0 0 0-.547.535c-2.109 2.237-4.066 6.38-4.674 9.544.237.48.422 1.093.544 1.561a13.044 13.044 0 0 1 .164.703s-.019-.071-.096-.296l-.05-.146a1.689 1.689 0 0 0-.033-.08c-.138-.32-.518-.995-.686-1.289-.143.423-.27.818-.376 1.176.484.884.778 2.4.778 2.4s-.025-.099-.147-.442c-.107-.303-.644-1.244-.772-1.464-.217.804-.304 1.346-.226 1.478.152.256.296.698.422 1.186.286 1.1.485 2.44.485 2.44l.017.224a22.41 22.41 0 0 0 .056 2.748c.095 1.146.273 2.13.5 2.657l.155-.084c-.334-1.038-.47-2.399-.41-3.967.09-2.398.642-5.29 1.661-8.304 1.723-4.55 4.113-8.201 6.3-9.945-1.993 1.8-4.692 7.63-5.5 9.788-.904 2.416-1.545 4.684-1.931 6.857.666-2.037 2.821-2.912 2.821-2.912s1.057-1.304 2.292-3.166c-.74.169-1.955.458-2.362.629-.6.251-.762.337-.762.337s1.945-1.184 3.613-1.72C21.695 7.9 24.195 2.767 21.678.521m-18.573.543A1.842 1.842 0 0 0 1.27 2.9v16.608a1.84 1.84 0 0 0 1.835 1.834h9.418a22.953 22.953 0 0 1-.052-2.707c-.006-.062-.011-.141-.016-.2a27.01 27.01 0 0 0-.473-2.378c-.121-.47-.275-.898-.369-1.057-.116-.197-.098-.31-.097-.432 0-.12.015-.245.037-.386a9.98 9.98 0 0 1 .234-1.045l.217-.028c-.017-.035-.014-.065-.031-.097l-.041-.381a32.8 32.8 0 0 1 .382-1.194l.2-.019c-.008-.016-.01-.038-.018-.053l-.043-.316c.63-3.28 2.587-7.443 4.8-9.791.066-.069.133-.128.198-.194Z"/></svg>
+            <svg id="mysql" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>MySQL</title><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg>
+            <svg id="nextcloud" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Nextcloud</title><path d="M12.018 6.537c-2.5 0-4.6 1.712-5.241 4.015-.56-1.232-1.793-2.105-3.225-2.105A3.569 3.569 0 0 0 0 12a3.569 3.569 0 0 0 3.552 3.553c1.432 0 2.664-.874 3.224-2.106.641 2.304 2.742 4.016 5.242 4.016 2.487 0 4.576-1.693 5.231-3.977.569 1.21 1.783 2.067 3.198 2.067A3.568 3.568 0 0 0 24 12a3.569 3.569 0 0 0-3.553-3.553c-1.416 0-2.63.858-3.199 2.067-.654-2.284-2.743-3.978-5.23-3.977zm0 2.085c1.878 0 3.378 1.5 3.378 3.378 0 1.878-1.5 3.378-3.378 3.378A3.362 3.362 0 0 1 8.641 12c0-1.878 1.5-3.378 3.377-3.378zm-8.466 1.91c.822 0 1.467.645 1.467 1.468s-.644 1.467-1.467 1.468A1.452 1.452 0 0 1 2.085 12c0-.823.644-1.467 1.467-1.467zm16.895 0c.823 0 1.468.645 1.468 1.468s-.645 1.468-1.468 1.468A1.452 1.452 0 0 1 18.98 12c0-.823.644-1.467 1.467-1.467z"/></svg>
+            <svg id="gtk" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GTK</title><path d="M9.01 23.773V14.45l-7.584 2.245Zm0-13.87L.91 3.828l.502 12.526 7.597-2.249ZM9.57 24l12.353-5.146-8.285-5.775-4.068 1.204ZM23.09 5.815l-9.257 2.849v4.148l8.237 5.741ZM9.57 9.975v3.964l3.932-1.164v-4.01Zm-.228-.52 4.16-1.28V0L1.231 3.37ZM22.715 5.34 13.833.052v8.021Z"/></svg>
+        </article>
+    </section>
+
+    <!--Portfólio-->
+    <section id="portfolio">
+        <h1>Meu <span>Portfólio</span></h1>
+        <article>
+            <h2><a href="https://studentplanner.felipealafy.net">🎓 Student Planner</a></h2>
+            <p>Um ecossistema de estudos feito com Jetpack Compose e Room para resolver a complexidade da faculdade. Um app offline-first focado em performance.</p>
+            <h3>Features</h3>
+            <ul>
+                <li>
+                    <h4>📚 Planners</h4>
                     <p>
-                        Atualmente, faço parte do time de sistemas da multinacional <strong class="text-slate-200">XCMG Brasil</strong> como Key-User, onde gerencio o ERP/CRM Microsoft Dynamics, automatizo fluxos complexos na nuvem (Power Automate), desenvolvimento de aplicações internas com power apps e traduzo necessidades operacionais para as equipes de desenvolvimento na China, comunicando-me diariamente em Inglês.
+                        São o bloco fundamental do Student Planner, eles são análogos a uma agenda física, e armazenam
+                        o nome do seu curso, uma cor base, como você gostaria de ver as notas e qual a nota minima para
+                        ser aprovado em cada matéria.
+
+                        Seu aplicativo pode ter múltiplos planners.
                     </p>
+                </li>
+                <li>
+                    <h4>🔖 Matérias</h4>
                     <p>
-                        Fora do ambiente corporativo corporativo, minha verdadeira paixão é o ecossistema <strong class="text-slate-200">Android Nativo</strong>. Dedico meu tempo construindo projetos Open Source robustos, aplicando princípios de Clean Architecture, MVVM e design patterns modernos.
+                        As matérias funcionam como divisórias para o planner, e cada uma pode armazenar diversas aulas e
+                        provas.
+                        Você pode criar uma matéria para cada matéria do seu curso.
                     </p>
-                </div>
+                </li>
+                <li>
+                    <h4>📄 Registro de Aulas</h4>
+                    <p>
+                        As aulas são a maneira pela qual você registra o seu tempo de estudo, ela pode ser gerada no
+                        momento exato
+                        em que você estiver numa aula, ou então preagendadas, já que permitem colocar data e hora de
+                        início e fim.
+                        Além disso, no momento você pode colocar observações dentro delas e ainda pode colocar links para
+                        aulas virtuais.
+                    </p>
+                </li>
+                <li>
+                    <h4>📋 Provas</h4>
+                    <p>
+                        Provas assim como as aulas servem para você registrar o seu tempo em testes e atividades que
+                        você está desenvolvendo no seu curso.
+                        Além disso, você poderá adicionar a sua nota tirada e o peso para computar a nota final na sua
+                        matéria.
+                    </p>
+                </li>
+                <li>
+                    <h4>⏰ Cronometro</h4>
+                    <p>
+                        É um recurso que permite fazer o registro em tempo real do seu tempo estudado, ele funciona em
+                        segundo plano.
+                        E conta o tempo até que você pause ou conclua, após isso você poderá adicionar esse tempo a uma
+                        aula ou prova.
+                    </p>
+                </li>
+                <li>
+                    <h4>📊 Controle de notas</h4>
+                    <p>
+                        Dentro do student planner você pode ver o seu desempenho geral no seu curso acessando os
+                        detalhes do planner.
+                        E também, é possível ver a nota e quantidade de provas e aulas que você registrou em cada
+                        matéria de maneira organizada.
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <aside>
+            <div class="developer_window">
+                <div class="red-light"></div>
+                <div class="yellow-light"></div>
+                <div class="green-light"></div>
+                <p>📼 Playing: <strong>Student Planner.mp4</strong> </p>
             </div>
+            <video src="media/StudentPlanner.mp4" autoplay preload="auto" muted loop></video>
+        </aside>
+    </section>
 
-            <!-- Tech Stack -->
-            <div id="skills" class="lg:col-span-5">
-                <h2 class="text-sm font-mono text-brand-primary tracking-widest uppercase mb-3">02. Stack Principal</h2>
-                <h3 class="font-serif text-3xl font-bold text-white mb-6">Ferramentas de Trabalho.</h3>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <!-- Skill Item -->
-                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-colors">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" class="w-6 h-6" alt="Kotlin" />
-                        <span class="font-medium text-slate-200 text-sm">Kotlin</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-colors">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-6 h-6" alt="Android" />
-                        <span class="font-medium text-slate-200 text-sm">Android SDK</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-colors">
-                        <span class="w-6 h-6 flex items-center justify-center bg-blue-500 rounded text-white text-xs font-bold font-mono">JC</span>
-                        <span class="font-medium text-slate-200 text-sm">Jetpack Compose</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-colors">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="w-6 h-6" alt="Room/SQLite" />
-                        <span class="font-medium text-slate-200 text-sm">Room DB / SQL</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-colors">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6" alt="Git" />
-                        <span class="font-medium text-slate-200 text-sm">Git & GitHub</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-primary/50 transition-colors">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="w-6 h-6" alt="Linux" />
-                        <span class="font-medium text-slate-200 text-sm">Linux / Bash</span>
-                    </div>
-                    <div class="col-span-2 flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10">
-                        <span class="font-medium text-slate-400 text-sm">Arquitetura: Clean Architecture, MVVM, Dagger Hilt</span>
-                    </div>
-                </div>
+    <!--Contato-->
+    <section id="contact">
+        <h1>Entre em <span>Contato</span></h1>
+        <form id="contact-form">
+            <fieldset>
+                <label>Seu nome: </label><br>
+                <input type="text" name="nome" id="name" required>
+                <br>
+                <label>Seu e-mail: </label><br>
+                <input type="email" name="Contato" id="email" required>
+                <br>
+                <label>Sua mensagem: </label>
+                <br>
+                <textarea rows="8" id="message" name="Mensagem" required></textarea>
+                <button type="submit">📬 Enviar e-mail</button>
+            </fieldset>
+            <div>
+                <p>
+                    📬
+                </p>
             </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- PROJETOS EM DESTAQUE -->
-<section id="projects" class="py-24 relative">
-    <div class="container mx-auto px-6">
-        <h2 class="text-sm font-mono text-brand-primary tracking-widest uppercase mb-3 text-center">03. Portfólio</h2>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-white mb-16 text-center">Software em Produção.</h3>
-
-        <!-- Project Card: Student Planner -->
-        <div class="relative bg-brand-card rounded-2xl border border-slate-700/50 overflow-hidden shadow-2xl group">
-            <div class="grid lg:grid-cols-2">
-
-                <!-- Text Info -->
-                <div class="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                    <div class="flex items-center justify-between mb-4">
-                        <h4 class="font-serif text-2xl font-bold text-white">Student Planner</h4>
-                        <span class="px-3 py-1 bg-green-500/10 text-brand-accent border border-green-500/20 rounded-full text-xs font-bold uppercase tracking-wide">Open Source</span>
-                    </div>
-
-                    <div class="bg-brand-dark/50 p-6 rounded-xl border border-white/5 mb-6 text-slate-300 text-sm leading-relaxed">
-                        <p>O ecossistema definitivo para organização acadêmica. Um aplicativo Android <strong class="text-white">Offline-First</strong> projetado com precisão de engenharia.</p>
-                        <p class="mt-2">Possui cálculo automático de médias, gestão de horários e componentes de UI reativos customizados. Arquitetado do zero usando Clean Architecture e Injeção de Dependência (Hilt).</p>
-                    </div>
-
-                    <ul class="flex flex-wrap gap-3 font-mono text-xs text-brand-primary mb-8">
-                        <li>Kotlin</li>
-                        <li>Jetpack Compose</li>
-                        <li>Room (Relacional)</li>
-                        <li>Dagger Hilt</li>
-                        <li>Coroutines</li>
-                    </ul>
-
-                    <div class="flex items-center gap-4">
-                        <a href="https://studentplanner.felipealafy.net" target="_blank" class="px-5 py-2.5 bg-white text-brand-dark font-bold rounded-lg hover:bg-slate-200 transition-colors flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            Landing Page Oficial
-                        </a>
-                        <a href="https://github.com/FelipeAlafy/StudentPlanner" target="_blank" class="p-2.5 bg-white/5 text-white hover:bg-white/10 border border-white/10 rounded-lg transition-colors" aria-label="Código Fonte no GitHub">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Visual / Image -->
-                <div class="bg-gradient-to-br from-blue-900/40 to-slate-900 flex items-center justify-center p-8 border-l border-white/5 order-1 lg:order-2">
-
-                    <!-- Simulated App Mockup (Realista Student Planner) -->
-                    <div class="w-64 h-[500px] bg-[#E3F2FD] rounded-[3rem] border-8 border-slate-800 shadow-2xl relative overflow-hidden flex flex-col group-hover:transform group-hover:scale-105 transition-transform duration-500 font-sans">
-                        <!-- Status Bar -->
-                        <div class="h-6 bg-[#1E88E5] w-full flex justify-end items-center px-4 gap-1.5">
-                            <div class="text-white text-[10px] font-medium mr-1">13:58</div>
-                            <div class="w-3 h-3 bg-white/90 rounded-sm"></div>
-                            <div class="w-3 h-3 bg-white/90 rounded-full"></div>
-                        </div>
-                        <!-- App Header -->
-                        <div class="h-14 bg-[#1E88E5] flex items-center justify-between px-4 shadow-md text-white z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                            <span class="font-medium text-[15px]">segunda-feira, 09/02</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <!-- App Body -->
-                        <div class="flex-1 p-3">
-                            <div class="bg-[#FCFDB9] rounded-xl p-3 shadow-sm text-slate-800 border border-yellow-200/50">
-                                <div class="flex gap-2 items-start mb-2">
-                                    <svg class="w-4 h-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                    <span class="text-[13px] font-medium leading-tight">Aula 2 - Estatística Descritiva</span>
-                                </div>
-                                <div class="flex gap-2 items-start mb-2 pl-1">
-                                    <svg class="w-3 h-3 shrink-0 text-slate-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                    <span class="text-[11px] text-slate-600 leading-tight">Período: 09/02/2026<br>-> 09/02/2026</span>
-                                </div>
-                                <div class="flex gap-2 items-start pl-1">
-                                    <svg class="w-3 h-3 shrink-0 text-slate-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-                                    <span class="text-[11px] text-slate-600 font-medium leading-tight">Probabilidade e Estatística</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAB -->
-                        <div class="absolute bottom-6 right-6 w-12 h-12 bg-[#1E88E5] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg">+</div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- EXPERIÊNCIA PROFISSIONAL -->
-<section id="experience" class="py-24 bg-brand-card/30 border-y border-white/5">
-    <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-sm font-mono text-brand-primary tracking-widest uppercase mb-3 text-center">04. Trajetória</h2>
-        <h3 class="font-serif text-3xl font-bold text-white mb-16 text-center">Experiência Profissional.</h3>
-
-        <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
-
-            <!-- Experiência 1 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-brand-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-card p-6 rounded-xl border border-slate-700/50 shadow-lg">
-                    <div class="flex flex-col mb-2">
-                        <span class="text-brand-primary font-mono text-xs font-bold mb-1">Jul 2024 - Presente</span>
-                        <h4 class="font-serif text-lg font-bold text-white">Assistente de Serviços / Key-User</h4>
-                        <span class="text-slate-400 text-sm">XCMG Brasil Indústria</span>
-                    </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-3">Atuação estratégica como Key-User do CRM/ERP (Microsoft Dynamics). Responsável por automatizações de fluxos em nuvem (Power Automate) e elaboração de relatórios/dashboards para tomada de decisão gerencial.</p>
-                    <ul class="text-xs font-mono text-slate-500 flex flex-wrap gap-2">
-                        <li>Dynamics 365</li>
-                        <li>Power Automate</li>
-                        <li>Power Apps</li>
-                        <li>Power BI</li>
-                        <li>Inglês B2 (Matriz China)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Experiência 2 -->
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-slate-700 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-dark p-6 rounded-xl border border-slate-800">
-                    <div class="flex flex-col mb-2">
-                        <span class="text-slate-500 font-mono text-xs font-bold mb-1">Mar 2024 - Jul 2024</span>
-                        <h4 class="font-serif text-lg font-bold text-slate-300">Auxiliar Administrativo (Dados & Qualidade)</h4>
-                        <span class="text-slate-500 text-sm">XCMG Brasil Indústria</span>
-                    </div>
-                    <p class="text-slate-500 text-sm leading-relaxed">Levantamento de métricas, processamento de dados para controle da área produtiva e cálculo de KPIs de qualidade (ISO 9001).</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER / CONTATO -->
-<footer class="py-12 border-t border-white/5 text-center relative overflow-hidden">
-    <div class="container mx-auto px-6 relative z-10">
-        <h2 class="font-serif text-3xl font-bold text-white mb-6">Vamos construir algo incrível?</h2>
-        <p class="text-slate-400 mb-8 max-w-md mx-auto">Atualmente estou aberto a novas oportunidades para atuar como Desenvolvedor Junior/Trainee. Se a sua empresa busca alguém focado em arquitetura limpa e resultados, vamos conversar.</p>
-
-        <a href="mailto:profissional@felipealafy.net" class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-brand-primary hover:bg-blue-600 text-white font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-primary/20 mb-16">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            Diga Olá!
-        </a>
-
-        <div class="flex items-center justify-center gap-6 mb-8">
-            <a href="https://github.com/FelipeAlafy" target="_blank" class="text-slate-500 hover:text-white transition-colors" aria-label="GitHub">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/felipe-alafy" target="_blank" class="text-slate-500 hover:text-white transition-colors" aria-label="LinkedIn">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-        </div>
-
-        <p class="text-slate-600 text-sm font-mono">
-            Projetado & Codificado por Felipe Alafy <br> &copy; <script>document.write(new Date().getFullYear())</script>
-        </p>
-    </div>
+        </form>
+    </section>
+</main>
+<footer>
+    <p>© Todos os direitos reservados a Felipe Alafy Rodrigues Silva, 2025-2026.</p>
+    <a href="https://www.linkedin.com/in/felipe-alafy/" target="_blank">
+        <svg>
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+        </svg>
+    </a>
+    <a href="https://github.com/FelipeAlafy" target="_blank">
+        <svg>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path>
+        </svg>
+    </a>
 </footer>
-
-<script>
-    // Inicializa o Syntax Highlighting
-    hljs.highlightAll();
-</script>
 </body>
 </html>
